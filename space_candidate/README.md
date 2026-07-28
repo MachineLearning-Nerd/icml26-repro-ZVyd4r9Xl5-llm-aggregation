@@ -15,7 +15,8 @@ tags:
 
 # Optimal Weighted LLM Aggregation (OWL)
 
-Current verification is listed first in the logbook. Claims 1, 2, 3, 5, and 6 are
+The [illustrated report](#/report) and current verification are listed first in
+the logbook. Claims 1, 2, 3, 5, and 6 are
 **VERIFIED** with universal proof certificates, exact independent checkers,
 calibrated full-scale simulation, the complete 48-row ensemble table audit,
 and claim-specific negative controls. The previous one-page executive summary

@@ -15,6 +15,12 @@
     "file": "pages/index.md",
     "children": [
       {
+        "slug": "report",
+        "title": "Illustrated reproduction report",
+        "file": "pages/report/page.md",
+        "children": []
+      },
+      {
         "slug": "claim-1",
         "title": "Claim 1 — OW Bayes-optimal (VERIFIED)",
         "file": "pages/claim-1/page.md",

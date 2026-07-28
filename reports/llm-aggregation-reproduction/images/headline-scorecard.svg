@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Reproduction headline: five verified claims and one blocked claim</title>
+  <desc id="desc">Five claims are verified, Claim 4 is blocked, and the best-supported forecast is ten of twelve points.</desc>
+  <rect width="1200" height="560" fill="#0b1020"/>
+  <text x="64" y="72" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="34" font-weight="700">Evidence, not assertion</text>
+  <text x="64" y="112" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="20">Claim-by-claim reproduction of arXiv 2510.01499</text>
+  <rect x="64" y="150" width="330" height="148" rx="18" fill="#13233b" stroke="#38bdf8" stroke-width="2"/>
+  <text x="94" y="195" fill="#7dd3fc" font-family="system-ui,sans-serif" font-size="20">BEST-SUPPORTED FORECAST</text>
+  <text x="94" y="260" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="62" font-weight="750">10 / 12</text>
+  <rect x="420" y="150" width="330" height="148" rx="18" fill="#132a28" stroke="#34d399" stroke-width="2"/>
+  <text x="450" y="195" fill="#6ee7b7" font-family="system-ui,sans-serif" font-size="20">SCIENTIFIC VERDICTS</text>
+  <text x="450" y="250" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="48" font-weight="750">5 verified</text>
+  <text x="450" y="278" fill="#a7f3d0" font-family="system-ui,sans-serif" font-size="18">Claims 1, 2, 3, 5, 6</text>
+  <rect x="776" y="150" width="360" height="148" rx="18" fill="#352819" stroke="#f59e0b" stroke-width="2"/>
+  <text x="806" y="195" fill="#fcd34d" font-family="system-ui,sans-serif" font-size="20">HONEST LIMIT</text>
+  <text x="806" y="250" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="48" font-weight="750">1 blocked</text>
+  <text x="806" y="278" fill="#fde68a" font-family="system-ui,sans-serif" font-size="18">Claim 4: raw caches unavailable</text>
+  <text x="64" y="358" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="22" font-weight="650">Full-scale simulation, M=10,000 × 89 seeds</text>
+  <rect x="64" y="390" width="1072" height="104" rx="14" fill="#111827"/>
+  <text x="94" y="430" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="18">K=2</text>
+  <text x="170" y="430" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="22">paper ISP 90.48%</text>
+  <text x="440" y="430" fill="#34d399" font-family="system-ui,sans-serif" font-size="22">observed mean 90.16%</text>
+  <text x="94" y="472" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="18">K=4</text>
+  <text x="170" y="472" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="22">paper ISP 94.45%</text>
+  <text x="440" y="472" fill="#34d399" font-family="system-ui,sans-serif" font-size="22">observed mean 94.41%</text>
+  <text x="826" y="451" fill="#7dd3fc" font-family="system-ui,sans-serif" font-size="20">Both inside 95% predictive ranges</text>
+  <text x="64" y="536" fill="#64748b" font-family="system-ui,sans-serif" font-size="16">Forecast only — the live judge remains 0/12 until it evaluates the published revision.</text>
+</svg>

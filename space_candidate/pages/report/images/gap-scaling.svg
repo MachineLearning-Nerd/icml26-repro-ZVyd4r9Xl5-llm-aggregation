@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">ISP minus majority voting accuracy gap across K</title>
+  <desc id="desc">The observed gap declines from 5.16 points at K2 to 1.19 points at K10, with log-log slope minus 0.90.</desc>
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <text x="70" y="62" font-family="system-ui,sans-serif" font-size="32" font-weight="700" fill="#0f172a">The ISP advantage shrinks as the option count grows</text>
+  <text x="70" y="98" font-family="system-ui,sans-serif" font-size="18" fill="#64748b">Accuracy-gap means across 89 seeds; finite-grid log–log slope = −0.902</text>
+  <line x1="120" y1="535" x2="1130" y2="535" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="145" x2="120" y2="535" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="470" x2="1130" y2="470" stroke="#e2e8f0"/>
+  <line x1="120" y1="405" x2="1130" y2="405" stroke="#e2e8f0"/>
+  <line x1="120" y1="340" x2="1130" y2="340" stroke="#e2e8f0"/>
+  <line x1="120" y1="275" x2="1130" y2="275" stroke="#e2e8f0"/>
+  <line x1="120" y1="210" x2="1130" y2="210" stroke="#e2e8f0"/>
+  <line x1="120" y1="145" x2="1130" y2="145" stroke="#e2e8f0"/>
+  <text x="62" y="540" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">0 pp</text>
+  <text x="62" y="475" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">1 pp</text>
+  <text x="62" y="410" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">2 pp</text>
+  <text x="62" y="345" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">3 pp</text>
+  <text x="62" y="280" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">4 pp</text>
+  <text x="62" y="215" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">5 pp</text>
+  <polyline points="180,200 410,403 640,434 870,448 1100,457" fill="none" stroke="#0ea5e9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#0284c7" stroke="#ffffff" stroke-width="4">
+    <circle cx="180" cy="200" r="11"/><circle cx="410" cy="403" r="11"/><circle cx="640" cy="434" r="11"/><circle cx="870" cy="448" r="11"/><circle cx="1100" cy="457" r="11"/>
+  </g>
+  <text x="180" y="180" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#0f172a">5.160 pp</text>
+  <text x="410" y="383" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#0f172a">2.037 pp</text>
+  <text x="640" y="414" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#0f172a">1.554 pp</text>
+  <text x="870" y="428" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#0f172a">1.341 pp</text>
+  <text x="1100" y="437" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" fill="#0f172a">1.193 pp</text>
+  <text x="180" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18">K=2</text>
+  <text x="410" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18">K=4</text>
+  <text x="640" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18">K=6</text>
+  <text x="870" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18">K=8</text>
+  <text x="1100" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18">K=10</text>
+  <rect x="750" y="115" width="350" height="62" rx="12" fill="#eff6ff" stroke="#7dd3fc"/>
+  <text x="775" y="143" font-family="system-ui,sans-serif" font-size="18" fill="#075985">Exact advantage certificate, K=16…512</text>
+  <text x="775" y="166" font-family="system-ui,sans-serif" font-size="18" fill="#075985">log–log slope = −0.983</text>
+  <text x="70" y="625" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">The finite accuracy curve corroborates the mechanism; the Θ(1/K) statement is certified on the exact expected-advantage formula.</text>
+</svg>

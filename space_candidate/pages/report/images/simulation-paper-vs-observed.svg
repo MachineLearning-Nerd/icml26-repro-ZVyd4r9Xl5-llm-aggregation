@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Paper and observed simulation accuracies for K equals 2 and K equals 4</title>
+  <desc id="desc">The reproduced means are close to the paper values for majority voting and ISP.</desc>
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <text x="70" y="62" font-family="system-ui,sans-serif" font-size="32" font-weight="700" fill="#0f172a">Paper point estimates sit inside reproduced variation</text>
+  <text x="70" y="98" font-family="system-ui,sans-serif" font-size="18" fill="#64748b">89 independent seeds · N=4 · M=10,000 · accuracies 0.6, 0.7, 0.8, 0.9</text>
+  <line x1="110" y1="535" x2="1140" y2="535" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="110" y1="150" x2="110" y2="535" stroke="#94a3b8" stroke-width="2"/>
+  <text x="46" y="540" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">80%</text>
+  <text x="46" y="412" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">85%</text>
+  <text x="46" y="284" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">90%</text>
+  <text x="46" y="156" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">95%</text>
+  <line x1="110" y1="407" x2="1140" y2="407" stroke="#e2e8f0"/>
+  <line x1="110" y1="279" x2="1140" y2="279" stroke="#e2e8f0"/>
+  <line x1="110" y1="151" x2="1140" y2="151" stroke="#e2e8f0"/>
+  <rect x="185" y="404" width="70" height="131" fill="#94a3b8"/>
+  <rect x="265" y="407" width="70" height="128" fill="#38bdf8"/>
+  <rect x="375" y="267" width="70" height="268" fill="#94a3b8"/>
+  <rect x="455" y="275" width="70" height="260" fill="#34d399"/>
+  <rect x="675" y="213" width="70" height="322" fill="#94a3b8"/>
+  <rect x="755" y="220" width="70" height="315" fill="#38bdf8"/>
+  <rect x="865" y="165" width="70" height="370" fill="#94a3b8"/>
+  <rect x="945" y="166" width="70" height="369" fill="#34d399"/>
+  <text x="180" y="390" font-family="system-ui,sans-serif" font-size="16" fill="#334155">85.13</text>
+  <text x="260" y="393" font-family="system-ui,sans-serif" font-size="16" fill="#0369a1">85.00</text>
+  <text x="370" y="253" font-family="system-ui,sans-serif" font-size="16" fill="#334155">90.48</text>
+  <text x="450" y="261" font-family="system-ui,sans-serif" font-size="16" fill="#047857">90.16</text>
+  <text x="670" y="199" font-family="system-ui,sans-serif" font-size="16" fill="#334155">92.64</text>
+  <text x="750" y="206" font-family="system-ui,sans-serif" font-size="16" fill="#0369a1">92.38</text>
+  <text x="860" y="151" font-family="system-ui,sans-serif" font-size="16" fill="#334155">94.45</text>
+  <text x="940" y="152" font-family="system-ui,sans-serif" font-size="16" fill="#047857">94.41</text>
+  <text x="235" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#0f172a">K=2 · MV</text>
+  <text x="425" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#0f172a">K=2 · ISP</text>
+  <text x="725" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#0f172a">K=4 · MV</text>
+  <text x="915" y="575" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#0f172a">K=4 · ISP</text>
+  <rect x="780" y="105" width="18" height="18" fill="#94a3b8"/><text x="808" y="120" font-family="system-ui,sans-serif" font-size="16">paper</text>
+  <rect x="890" y="105" width="18" height="18" fill="#38bdf8"/><text x="918" y="120" font-family="system-ui,sans-serif" font-size="16">observed MV</text>
+  <rect x="1040" y="105" width="18" height="18" fill="#34d399"/><text x="1068" y="120" font-family="system-ui,sans-serif" font-size="16">observed ISP</text>
+  <text x="70" y="625" font-family="system-ui,sans-serif" font-size="16" fill="#64748b">Observed means: MV 85.0019%, ISP 90.1618% (K=2); MV 92.3775%, ISP 94.4143% (K=4).</text>
+</svg>

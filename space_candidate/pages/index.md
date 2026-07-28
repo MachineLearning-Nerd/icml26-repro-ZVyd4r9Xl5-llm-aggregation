@@ -7,6 +7,7 @@ The judged revision remains preserved, but its executive summary is a
 
 | Page |
 | --- |
+| [Illustrated reproduction report](#/report) |
 | [Claim 1 — OW is Bayes-optimal (VERIFIED)](#/claim-1) |
 | [Claim 2 — ISP ≥ MV ≥ SP (VERIFIED)](#/claim-2) |
 | [Claim 3 — full simulation (VERIFIED)](#/claim-3) |
