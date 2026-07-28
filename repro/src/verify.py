@@ -9,7 +9,7 @@ c6 Corollary 1: K=2 optimal weights proportional to logit(x_i) (Bradley-Terry).
 Run: python repro/src/verify.py
 """
 from __future__ import annotations
-import sys, os, json, time
+import sys, os, json, time, subprocess
 sys.path.insert(0, os.path.dirname(__file__))
 import numpy as np
 from aggregation import (simulate, estimate_pairwise, agg_mv, agg_ow, agg_opt,
@@ -142,6 +142,22 @@ def main():
     os.makedirs("outputs", exist_ok=True)
     json.dump(out, open("outputs/verify_results.json", "w"), indent=2)
     print(f"\nSaved outputs/verify_results.json ({out['elapsed_sec']}s)")
+
+    print("\n" + "=" * 70)
+    print("c1 / formal universal proof certificate + independent checker + control")
+    print("=" * 70)
+    claim1_verifier = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        ".openresearch",
+        "artifacts",
+        "claim_1",
+        "verifier.py",
+    )
+    completed = subprocess.run([sys.executable, claim1_verifier], check=False)
+    if completed.returncode != 0:
+        print(f"CLAIM_1_VERIFIER_FAILED exit={completed.returncode}")
+        raise SystemExit(completed.returncode)
+    print("CUMULATIVE_VERDICT claim_1=VERIFIED")
 
 
 if __name__ == "__main__":
