@@ -150,7 +150,7 @@ def symbolic_pair_identities() -> dict[str, object]:
     )
     return {
         "arithmetic": "exact sparse rational polynomials in symbolic K,x,y",
-        "isp_minus_mv_identity": q_isp.equals(target_isp_mv),
+        "isp_minus_mv_identity": (q_isp - q_mv).equals(target_isp_mv),
         "mv_minus_sp_identity": (q_mv - q_sp).equals(target_mv_sp),
         "conditional_same_formula_encoded": True,
         "conditional_different_formula_encoded": True,
