@@ -21,7 +21,7 @@ def find_root() -> Path:
 ROOT = find_root()
 sys.path.insert(0, str(ROOT))
 
-from repro.claims.claim3_simulation import controls, run_pilot, small_case_digest
+from repro.claims.claim3_simulation import controls, run_full, small_case_digest
 
 
 def run_independent(path: Path) -> dict[str, object]:
@@ -59,18 +59,18 @@ def main() -> int:
         and control["sign_mutation_reference_digest"]
         != control["sign_mutation_bad_digest"]
     )
-    pilot = run_pilot()
-    passed = digest_match and control_pass
+    full = run_full()
+    passed = digest_match and control_pass and full["verdict"] == "VERIFIED"
     output = {
         "claim_id": "claim_3",
-        "stage": "pilot",
-        "verdict": "BLOCKED",
-        "pilot_status": "PASS" if passed else "FAIL",
+        "stage": "full",
+        "verdict": "VERIFIED" if passed else "BLOCKED",
+        "full_status": "PASS" if passed else "FAIL",
         "production_small_case_digest": production_digest,
         "independent_checker": independent,
         "production_independent_digest_match": digest_match,
         "negative_controls": control,
-        "pilot": pilot,
+        "full": full,
         "git_sha": git_sha(),
         "python": platform.python_version(),
         "platform": platform.platform(),
@@ -78,7 +78,7 @@ def main() -> int:
         "configured_workers": 8,
         "runtime_seconds": round(time.perf_counter() - started, 6),
     }
-    print("CLAIM_3_PILOT_RESULT=" + json.dumps(output, sort_keys=True))
+    print("CLAIM_3_RESULT=" + json.dumps(output, sort_keys=True))
     return 0 if passed else 1
 
 

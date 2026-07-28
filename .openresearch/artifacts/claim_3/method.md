@@ -16,3 +16,9 @@ An independent slow implementation recreates a full deterministic 256-question
 case and must match the production digest. With uniform pairwise information,
 ISP must reduce exactly to MV. A sign-corrupted ISP mutation must disagree with
 the independent/reference result.
+
+The full run uses the resulting 89 fresh seeds (`1000` through `1088`) and
+does not reuse any pilot seed. The reported paper number is treated as one
+stochastic realization and compared with the empirical 95% single-run
+predictive interval. The replicate mean and its CI answer a different question
+and are reported separately.

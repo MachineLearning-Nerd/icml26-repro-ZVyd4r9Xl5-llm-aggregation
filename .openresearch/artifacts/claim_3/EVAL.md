@@ -1,7 +1,8 @@
 # Claim 3 evaluator record
 
-Status: BLOCKED.
+Status before the full run: BLOCKED.
 
-This node is a pre-registered calibration pilot. It cannot change the claim
-verdict. A successful pilot fixes the full replicate count and records runtime,
-independent implementation agreement, and negative controls.
+The successful pilot fixed 89 fresh full-run seeds. This child will become
+VERIFIED only if the K=2/K=4 paper values fall within the pre-registered
+single-run predictive intervals, every paper-K paired gap mean CI is above
+zero, the independent digest matches, and both controls pass.

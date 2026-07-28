@@ -13,6 +13,7 @@ import numpy as np
 
 ACCURACIES = np.asarray([0.6, 0.7, 0.8, 0.9], dtype=float)
 PILOT_SEEDS = (101, 211, 307, 401, 503, 601, 701, 809)
+FULL_SEEDS = tuple(range(1000, 1089))
 PAPER_K = (2, 4, 6, 8, 10)
 EXTENDED_K = (12, 16, 24, 32)
 M_QUESTIONS = 10_000
@@ -262,4 +263,180 @@ def run_pilot() -> dict[str, object]:
         "summary": summary,
         "scaling_pilot": scaling_slopes(rows),
         "calibration": calibrated_replicate_count(summary),
+    }
+
+
+def full_summary(rows: list[dict[str, float | int]]) -> dict[str, object]:
+    by_k: dict[str, object] = {}
+    for k in (*PAPER_K, *EXTENDED_K):
+        subset = [row for row in rows if row["K"] == k]
+        entry: dict[str, object] = {"replicates": len(subset)}
+        for metric in ("mv", "isp", "gap"):
+            values = np.asarray([row[metric] for row in subset], dtype=float)
+            mean = float(values.mean())
+            standard_deviation = float(values.std(ddof=1))
+            entry[metric] = {
+                "mean": mean,
+                "sample_std": standard_deviation,
+                "mean_ci95_normal": [
+                    mean - 1.96 * standard_deviation / math.sqrt(len(values)),
+                    mean + 1.96 * standard_deviation / math.sqrt(len(values)),
+                ],
+                "single_run_predictive_interval95": [
+                    float(np.quantile(values, 0.025)),
+                    float(np.quantile(values, 0.975)),
+                ],
+                "single_run_min": float(values.min()),
+                "single_run_max": float(values.max()),
+            }
+        if k in PAPER_ACCURACY:
+            entry["paper"] = PAPER_ACCURACY[k]
+            compatibility = {}
+            for metric in ("mv", "isp"):
+                paper_value = PAPER_ACCURACY[k][metric]
+                observed = entry[metric]
+                z_score = (
+                    (paper_value - observed["mean"]) / observed["sample_std"]
+                    if observed["sample_std"] > 0
+                    else 0.0
+                )
+                low, high = observed["single_run_predictive_interval95"]
+                compatibility[metric] = {
+                    "single_run_z_score": z_score,
+                    "within_empirical_predictive_interval95": bool(
+                        low <= paper_value <= high
+                    ),
+                }
+            entry["paper_compatibility"] = compatibility
+        by_k[str(k)] = entry
+    return by_k
+
+
+def accuracy_gap_scaling(rows: list[dict[str, float | int]]) -> dict[str, object]:
+    k_values = np.asarray(PAPER_K, dtype=float)
+    mean_gaps = np.asarray(
+        [
+            np.mean([row["gap"] for row in rows if row["K"] == k])
+            for k in PAPER_K
+        ],
+        dtype=float,
+    )
+    seed_slopes = []
+    for seed in FULL_SEEDS:
+        gaps = np.asarray(
+            [
+                next(
+                    row["gap"]
+                    for row in rows
+                    if row["seed"] == seed and row["K"] == k
+                )
+                for k in PAPER_K
+            ],
+            dtype=float,
+        )
+        if np.all(gaps > 0):
+            seed_slopes.append(
+                float(np.polyfit(np.log(k_values), np.log(gaps), 1)[0])
+            )
+    return {
+        "scope": "empirical aggregation-accuracy gap on the paper K grid",
+        "K_values": list(PAPER_K),
+        "mean_gaps": mean_gaps.tolist(),
+        "mean_gap_loglog_slope": float(
+            np.polyfit(np.log(k_values), np.log(mean_gaps), 1)[0]
+        ),
+        "valid_seed_slopes": len(seed_slopes),
+        "seed_slope_median": float(np.median(seed_slopes)),
+        "seed_slope_interval95": [
+            float(np.quantile(seed_slopes, 0.025)),
+            float(np.quantile(seed_slopes, 0.975)),
+        ],
+        "interpretation": (
+            "finite-grid empirical evidence only; the paper's exact Theta "
+            "statement is for expected advantage"
+        ),
+    }
+
+
+def expected_advantage_scaling() -> dict[str, object]:
+    k_values = np.asarray([16, 32, 64, 128, 256, 512], dtype=float)
+    gaps = []
+    n = len(ACCURACIES)
+    for k_float in k_values:
+        k = int(k_float)
+        numerator = sum(
+            (k * ACCURACIES[i] - 1) * (k * ACCURACIES[j] - 1) ** 2
+            for i in range(n)
+            for j in range(n)
+            if i != j
+        )
+        gaps.append(numerator / ((n - 1) * k * (k - 1) ** 3))
+    gap_values = np.asarray(gaps, dtype=float)
+    return {
+        "scope": "Theorem 2 expected-advantage gap",
+        "K_values": k_values.astype(int).tolist(),
+        "exact_formula_values": gap_values.tolist(),
+        "K_times_gap": (k_values * gap_values).tolist(),
+        "loglog_slope": float(
+            np.polyfit(np.log(k_values), np.log(gap_values), 1)[0]
+        ),
+        "certificate": (
+            "numerator has degree 3 with positive leading coefficient and "
+            "denominator has degree 4 with positive leading coefficient"
+        ),
+    }
+
+
+def run_full() -> dict[str, object]:
+    cases = [
+        Case(seed=seed, k=k)
+        for seed in FULL_SEEDS
+        for k in (*PAPER_K, *EXTENDED_K)
+    ]
+    with ProcessPoolExecutor(max_workers=WORKERS) as executor:
+        rows = list(executor.map(run_case, cases))
+    rows.sort(key=lambda row: (row["K"], row["seed"]))
+    summary = full_summary(rows)
+    required_values = [
+        summary[k]["paper_compatibility"][metric][
+            "within_empirical_predictive_interval95"
+        ]
+        for k in ("2", "4")
+        for metric in ("mv", "isp")
+    ]
+    positive_paired_effects = [
+        summary[k]["gap"]["mean_ci95_normal"][0] > 0
+        for k in map(str, PAPER_K)
+    ]
+    compatible = all(required_values) and all(positive_paired_effects)
+    return {
+        "stage": "full",
+        "verdict": "VERIFIED" if compatible else "BLOCKED",
+        "assessment": (
+            "paper K=2/K=4 values statistically compatible and paired ISP "
+            "improvement positive across all paper K"
+            if compatible
+            else "pre-registered compatibility or paired-effect criterion failed"
+        ),
+        "N": 4,
+        "M": M_QUESTIONS,
+        "accuracies": ACCURACIES.tolist(),
+        "paper_K": list(PAPER_K),
+        "extended_K": list(EXTENDED_K),
+        "seeds": list(FULL_SEEDS),
+        "replicates": len(FULL_SEEDS),
+        "configured_workers": WORKERS,
+        "calibrated_from_pilot_replicates": 89,
+        "rows": rows,
+        "summary": summary,
+        "accuracy_gap_scaling": accuracy_gap_scaling(rows),
+        "expected_advantage_scaling": expected_advantage_scaling(),
+        "acceptance": {
+            "K2_K4_paper_values_within_predictive_interval95": all(
+                required_values
+            ),
+            "paired_gap_mean_ci95_above_zero_all_paper_K": all(
+                positive_paired_effects
+            ),
+        },
     }
