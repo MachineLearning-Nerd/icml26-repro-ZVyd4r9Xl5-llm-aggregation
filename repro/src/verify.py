@@ -189,6 +189,29 @@ def main():
         raise SystemExit(completed.returncode)
     print("CUMULATIVE_VERDICT claim_2=VERIFIED")
 
+    print("\n" + "=" * 70)
+    print("c3 / calibrated full-scale simulation pilot")
+    print("=" * 70)
+    claim3_verifier = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        ".openresearch",
+        "artifacts",
+        "claim_3",
+        "verifier.py",
+    )
+    if not os.path.isfile(claim3_verifier):
+        claim3_verifier = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+            "evidence",
+            "claim-3",
+            "verifier.py",
+        )
+    completed = subprocess.run([sys.executable, claim3_verifier], check=False)
+    if completed.returncode != 0:
+        print(f"CLAIM_3_PILOT_FAILED exit={completed.returncode}")
+        raise SystemExit(completed.returncode)
+    print("CUMULATIVE_VERDICT claim_3=BLOCKED stage=pilot")
+
 
 if __name__ == "__main__":
     main()
