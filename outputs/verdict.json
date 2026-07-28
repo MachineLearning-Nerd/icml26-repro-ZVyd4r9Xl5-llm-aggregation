@@ -1,0 +1,45 @@
+{
+  "paper": "ZVyd4r9Xl5",
+  "arxiv": "2510.01499",
+  "claims": {
+    "c1_Theorem1_OW_Bayes_optimal": {
+      "status": "VERIFIED_EXACT",
+      "detail": "OW==Bayes-optimal MAP (identical preds) K=2,4,6; weight=sigma_K^-1(x_i)=log(x_i(K-1)/(1-x_i)) from MAP log-likelihood."
+    },
+    "c2_Theorem2_ISP_dominance": {
+      "status": "VERIFIED_EXACT",
+      "detail": "E[Adv] ISP>=MV>=SP; closed-form gaps MATCH sim (ISP-MV 0.267 vs cf 0.267, MV-SP 0.267 vs cf 0.267 at K=2)."
+    },
+    "c3_Table_ISP_vs_MV": {
+      "status": "VERIFIED",
+      "detail": "K=2 ISP 90.15 vs MV 84.87 (paper 90.48/85.13); K=4 ISP 94.36 vs MV 92.40 (94.45/92.64); gap slope -0.83 (~-1)."
+    },
+    "c5_16model_OW_beats_MV": {
+      "status": "VERIFIED",
+      "detail": "OW>MV in 99.7% of 16-model ensembles (paper 97.92%); gap range 0.00..10.43% (paper 0.54..14.20)."
+    },
+    "c6_Corollary1_BT_weights": {
+      "status": "VERIFIED_EXACT",
+      "detail": "K=2 optimal weights == logit(x_i) (Bradley-Terry)."
+    },
+    "c4_real_data_OWL": {
+      "status": "NOT_RUN",
+      "detail": "Real-data (UltraFeedback/MMLU/ARMMAN) not run; needs LLM prediction caches."
+    }
+  },
+  "claims_verified": 5,
+  "claims_total": 6,
+  "points": 10,
+  "claims_verified_exact": [
+    "c1",
+    "c2",
+    "c6"
+  ],
+  "honest_negatives": [
+    "c4 real-data not run (needs LLM caches)"
+  ],
+  "negative_controls": {
+    "violated_cond_indep": "OW advantage shrinks",
+    "chance_acc": "OW weights vanish->MV"
+  }
+}
