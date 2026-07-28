@@ -166,6 +166,29 @@ def main():
         raise SystemExit(completed.returncode)
     print("CUMULATIVE_VERDICT claim_1=VERIFIED")
 
+    print("\n" + "=" * 70)
+    print("c2 / formal universal ordering certificate + independent checker + control")
+    print("=" * 70)
+    claim2_verifier = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        ".openresearch",
+        "artifacts",
+        "claim_2",
+        "verifier.py",
+    )
+    if not os.path.isfile(claim2_verifier):
+        claim2_verifier = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+            "evidence",
+            "claim-2",
+            "verifier.py",
+        )
+    completed = subprocess.run([sys.executable, claim2_verifier], check=False)
+    if completed.returncode != 0:
+        print(f"CLAIM_2_VERIFIER_FAILED exit={completed.returncode}")
+        raise SystemExit(completed.returncode)
+    print("CUMULATIVE_VERDICT claim_2=VERIFIED")
+
 
 if __name__ == "__main__":
     main()
