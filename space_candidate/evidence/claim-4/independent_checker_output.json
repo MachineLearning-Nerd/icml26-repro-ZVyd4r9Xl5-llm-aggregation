@@ -1,0 +1,23 @@
+{
+  "aggregate_rows_do_not_identify_joint_predictions": true,
+  "all_cells_reconstruct_display": true,
+  "cells": {
+    "ARMMAN": {
+      "mv": {"candidate_correct_counts": [10045, 10046], "candidate_count": 2, "displayed_percent": "85.24"},
+      "ow_l": {"candidate_correct_counts": [10109], "candidate_count": 1, "displayed_percent": "85.78"}
+    },
+    "MMLU": {
+      "mv": {"candidate_correct_counts": [98086, 98087, 98088, 98089, 98090, 98091, 98092, 98093, 98094, 98095, 98096], "candidate_count": 11, "displayed_percent": "89.32"},
+      "ow_l": {"candidate_correct_counts": [99239, 99240, 99241, 99242, 99243, 99244, 99245, 99246, 99247, 99248, 99249], "candidate_count": 11, "displayed_percent": "90.37"}
+    },
+    "UltraFeedback": {
+      "mv": {"candidate_correct_counts": [40710, 40711, 40712, 40713, 40714], "candidate_count": 5, "displayed_percent": "72.21"},
+      "ow_l": {"candidate_correct_counts": [41527, 41528, 41529, 41530, 41531, 41532], "candidate_count": 6, "displayed_percent": "73.66"}
+    }
+  },
+  "checker": "independent Decimal/integer enumeration",
+  "five_of_six_cells_nonunique": true,
+  "imports_production_code": false,
+  "one_hundredth_mutation_rejected": true,
+  "status": "PASS"
+}

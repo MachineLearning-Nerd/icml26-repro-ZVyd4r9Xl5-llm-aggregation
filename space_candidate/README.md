@@ -21,6 +21,7 @@ calibrated full-scale simulation, the complete 48-row ensemble table audit,
 and claim-specific negative controls. The previous one-page executive summary
 is retained as **Historical rejected baseline**.
 
-This is an intermediate candidate artifact. Claim 4 is not yet release-ready,
-and no score increase is claimed. Claim 5 verifies the published
-aggregate but does not substitute for Claim 4's unreleased prediction caches.
+Claim 4 is honestly **BLOCKED** after three distinct verification routes and a
+fourth falsification route because exact prediction caches, ARMMAN records, and
+inference provenance are unavailable. No score increase is claimed. Claim 5's
+published aggregate audit does not substitute for Claim 4's raw experiment.

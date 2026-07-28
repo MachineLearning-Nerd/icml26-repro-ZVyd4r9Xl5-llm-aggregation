@@ -8,7 +8,7 @@
     "icml2026-repro",
     "paper-ZVyd4r9Xl5"
   ],
-  "updated_at": "2026-07-28T18:54:00+00:00",
+  "updated_at": "2026-07-28T19:11:57+00:00",
   "root": {
     "slug": "index",
     "title": "Optimal Weighted LLM Aggregation (OWL)",
@@ -30,6 +30,12 @@
         "slug": "claim-3",
         "title": "Claim 3 — full simulation (VERIFIED)",
         "file": "pages/claim-3/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-4",
+        "title": "Claim 4 — real-data Table 3 (BLOCKED)",
+        "file": "pages/claim-4/page.md",
         "children": []
       },
       {

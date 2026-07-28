@@ -5,6 +5,7 @@ c2 Theorem 2: E[Adv_ISP] >= E[Adv_MV] >= E[Adv_SP]; closed-form gaps match.
 c3 Table: ISP 90.48 vs MV 85.13 (K=2), 94.45 vs 92.64 (K=4); gap Theta(1/K).
 c5 Appendix E.4: exact 48-row OW-L/MV aggregate and best-method lift range.
 c6 Corollary 1: universal binary inverse-logit/Bradley-Terry certificate.
+c4 Table 3: four-route real-data evidence audit; BLOCKED without raw caches.
 
 Run: python repro/src/verify.py
 """
@@ -225,6 +226,29 @@ def main():
         print(f"CLAIM_6_VERIFIER_FAILED exit={completed.returncode}")
         raise SystemExit(completed.returncode)
     print("CUMULATIVE_VERDICT claim_6=VERIFIED")
+
+    print("\n" + "=" * 70)
+    print("c4 / exact Table 3 four-route access and falsification audit")
+    print("=" * 70)
+    claim4_verifier = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        ".openresearch",
+        "artifacts",
+        "claim_4",
+        "verifier.py",
+    )
+    if not os.path.isfile(claim4_verifier):
+        claim4_verifier = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+            "evidence",
+            "claim-4",
+            "verifier.py",
+        )
+    completed = subprocess.run([sys.executable, claim4_verifier], check=False)
+    if completed.returncode != 0:
+        print(f"CLAIM_4_VERIFIER_FAILED exit={completed.returncode}")
+        raise SystemExit(completed.returncode)
+    print("CUMULATIVE_VERDICT claim_4=BLOCKED")
 
 
 if __name__ == "__main__":

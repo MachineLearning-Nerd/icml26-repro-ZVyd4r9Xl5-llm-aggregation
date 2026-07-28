@@ -1,0 +1,46 @@
+{
+  "retrieved_at_utc": "2026-07-28T19:05:36Z",
+  "github_repository_searches": [
+    {
+      "query": "\"Beyond Majority Voting\" \"Higher-Order Information\"",
+      "result_count": 0
+    },
+    {
+      "query": "2510.01499",
+      "result_count": 0
+    }
+  ],
+  "hugging_face_dataset_searches": [
+    {
+      "query": "Beyond Majority Voting LLM Aggregation",
+      "result_count": 0
+    },
+    {
+      "query": "2510.01499",
+      "result_count": 0
+    },
+    {
+      "query": "Inverse Surprisingly Popular",
+      "result_count": 0
+    },
+    {
+      "query": "ARMMAN call records",
+      "result_count": 0
+    },
+    {
+      "query": "ARMMAN maternal health",
+      "result_count": 0
+    }
+  ],
+  "public_dataset_controls": {
+    "UltraFeedback": {
+      "search_result_count": 10,
+      "first_result": "openbmb/UltraFeedback"
+    },
+    "MMLU": {
+      "search_result_count": 10,
+      "first_result": "cais/mmlu"
+    }
+  },
+  "interpretation": "The searches can show no public release was discoverable at retrieval time, not that no release can exist."
+}
