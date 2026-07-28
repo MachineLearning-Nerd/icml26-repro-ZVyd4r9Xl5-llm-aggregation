@@ -1,0 +1,34 @@
+{
+  "candidate_file_count": 118,
+  "candidate_git_sha": "105c515534a88a3849f75f28f61eb12252bd1e7a",
+  "judged_file_count": 13,
+  "judged_revision": "d6708e1563a1a80106e7be65e607f333e61ff023",
+  "missing_judged_paths": [],
+  "modified_preserved_navigation_paths": {
+    "README.md": {
+      "candidate_sha256": "2617e49e77bc7857c381b695e585e9cc0f96d78b07d12b30b76e0f7f1ae74cc2",
+      "judged_sha256": "3763e1b3e9d91e086f9aeaf17dbb984840fefe908a1c6e285beb606de3a8b785"
+    },
+    "logbook.json": {
+      "candidate_sha256": "0111bda966694fa5e8654613584b996c91122eba15c2c65475f77392d1f7bcda",
+      "judged_sha256": "c0d4d9a8cb3489ce917dd1f508e2df19b405497cbb1581e9681b96a7720f327b"
+    },
+    "pages/index.md": {
+      "candidate_sha256": "9bcc2bad1337754cc864440580574b3eed48986fcc0f3849edb01e849834064e",
+      "judged_sha256": "6c3cfbd851b6ef0575cfd891922c044508f0bc05f423d6f49bd54bad22265b09"
+    }
+  },
+  "old_file_set_is_subset": true,
+  "unchanged_paths": [
+    ".gitattributes",
+    "bucket-icon.svg",
+    "index.html",
+    "logbook.css",
+    "logbook.js",
+    "pages/executive-summary/page.md",
+    "style.css",
+    "trackio-logo-light.png",
+    "trackio-logo.png",
+    "trackio-wordmark-dark.png"
+  ]
+}
