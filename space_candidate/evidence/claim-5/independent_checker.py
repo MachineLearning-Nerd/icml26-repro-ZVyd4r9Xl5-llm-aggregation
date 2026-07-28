@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 def main() -> int:
-    path = Path(__file__).resolve().parent / "raw" / "appendix_tables_4_6.csv"
+    path = Path(__file__).resolve().parent / "appendix_tables_4_6.csv"
     with path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
 

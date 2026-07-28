@@ -25,15 +25,27 @@ from repro.claims.claim5_tables import accepted, load_rows, negative_controls, s
 
 
 def git_sha() -> str:
-    return subprocess.run(
-        ["git", "rev-parse", "HEAD"], cwd=ROOT, check=True, capture_output=True, text=True
-    ).stdout.strip()
+    process = subprocess.run(
+        ["git", "rev-parse", "HEAD"],
+        cwd=ROOT,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if process.returncode == 0:
+        return process.stdout.strip()
+    metadata = json.loads(
+        (Path(__file__).resolve().parent / "run_metadata.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    return str(metadata["git_sha"])
 
 
 def main() -> int:
     started = time.perf_counter()
     artifact_dir = Path(__file__).resolve().parent
-    data_path = artifact_dir / "raw" / "appendix_tables_4_6.csv"
+    data_path = artifact_dir / "appendix_tables_4_6.csv"
     contract = json.loads((artifact_dir / "claim_contract.json").read_text(encoding="utf-8"))
     rows = load_rows(data_path)
     summary = summarize(rows)

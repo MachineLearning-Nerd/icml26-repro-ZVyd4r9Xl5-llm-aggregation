@@ -26,13 +26,21 @@ HERE = Path(__file__).resolve().parent
 
 
 def git_sha() -> str:
-    return subprocess.run(
+    process = subprocess.run(
         ["git", "rev-parse", "HEAD"],
         cwd=ROOT,
-        check=True,
+        check=False,
         capture_output=True,
         text=True,
-    ).stdout.strip()
+    )
+    if process.returncode == 0:
+        return process.stdout.strip()
+    metadata = json.loads(
+        (Path(__file__).resolve().parent / "run_metadata.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    return str(metadata["git_sha"])
 
 
 def main() -> int:
