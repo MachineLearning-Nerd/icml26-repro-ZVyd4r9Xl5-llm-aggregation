@@ -1,0 +1,22 @@
+{
+  "K": 2,
+  "N": 2,
+  "accuracies": [
+    "2/5",
+    "9/10"
+  ],
+  "all_agents_at_least_random_chance": false,
+  "conditional_independence": true,
+  "expected_advantage": {
+    "isp": "63/250",
+    "mv": "3/10",
+    "sp": "87/250"
+  },
+  "interpretation": "scope control, not a falsification of Theorem 2",
+  "isp_below_mv_observed": true,
+  "mv_below_sp_observed": true,
+  "purpose": "the ordering must fail when the no-worse-than-random premise is deliberately violated",
+  "status": "PASS",
+  "uniform_post_shuffle_prior": true,
+  "uniform_wrong_labels": true
+}

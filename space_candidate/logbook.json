@@ -8,7 +8,7 @@
     "icml2026-repro",
     "paper-ZVyd4r9Xl5"
   ],
-  "updated_at": "2026-07-28T17:58:00+00:00",
+  "updated_at": "2026-07-28T18:25:00+00:00",
   "root": {
     "slug": "index",
     "title": "Optimal Weighted LLM Aggregation (OWL)",
@@ -21,6 +21,12 @@
         "children": []
       },
       {
+        "slug": "claim-2",
+        "title": "Claim 2 — ISP ≥ MV ≥ SP (VERIFIED)",
+        "file": "pages/claim-2/page.md",
+        "children": []
+      },
+      {
         "slug": "executive-summary",
         "title": "Historical rejected baseline",
         "file": "pages/executive-summary/page.md",
@@ -28,6 +34,6 @@
       }
     ]
   },
-  "agent_view_tokens": 2650,
-  "revision": "1785261480000000000"
+  "agent_view_tokens": 5350,
+  "revision": "1785263100000000000"
 }
