@@ -1,0 +1,15 @@
+{
+  "run_id": "1250e06d-5c79-4505-8648-a8eef6f25179",
+  "git_sha": "fdcb642148ffb3872e43ac2d5f013b5ef4c91d3a",
+  "fixed_command": "uv run python repro/src/verify.py",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
+  "estimated_cores": 8,
+  "allocated_vcpu": 8,
+  "claim5_configured_workers": 1,
+  "host_visible_cpu_count": 64,
+  "total_runtime_seconds": 85,
+  "claim5_verifier_runtime_seconds": 0.055232,
+  "estimated_cost_usd_upper_bound": 0.001
+}

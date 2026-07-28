@@ -1,0 +1,11 @@
+{
+  "count_mutation_owl_wins": 46,
+  "count_mutation_rejected": true,
+  "owl_only_range_conflation_rejected": true,
+  "owl_only_signed_range": [
+    "-0.51",
+    "14.20"
+  ],
+  "range_mutation_best_max": "11.58",
+  "range_mutation_rejected": true
+}

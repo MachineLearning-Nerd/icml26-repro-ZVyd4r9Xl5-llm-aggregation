@@ -3,7 +3,7 @@
 c1 Theorem 1: OW == Bayes-optimal MAP (omega_i = sigma_K^{-1}(x_i)).  EXACT.
 c2 Theorem 2: E[Adv_ISP] >= E[Adv_MV] >= E[Adv_SP]; closed-form gaps match.
 c3 Table: ISP 90.48 vs MV 85.13 (K=2), 94.45 vs 92.64 (K=4); gap Theta(1/K).
-c5 16-model ensembles: OW > MV in ~98% of cases.
+c5 Appendix E.4: exact 48-row OW-L/MV aggregate and best-method lift range.
 c6 Corollary 1: K=2 optimal weights proportional to logit(x_i) (Bradley-Terry).
 
 Run: python repro/src/verify.py
@@ -77,26 +77,6 @@ def thm2_ordering_and_gaps():
     return out
 
 
-def c5_ensemble(n_models=16, n_trials=300):
-    """c5: across many 16-model ensembles with HETEROGENEOUS accuracies (incl. near-chance
-    models, as in real LLM ensembles), OW > MV in ~98% of cases (paper 97.92%).
-    Near-chance models get ~0 weight (logit), so OW down-weights them while MV is dragged down."""
-    rng = np.random.default_rng(42)
-    wins = 0; gaps = []
-    K = 2
-    for t in range(n_trials):
-        acc = rng.uniform(0.50, 0.95, size=n_models)         # heterogeneous, down to chance
-        truth, A = simulate(acc, K, 3000, seed=1000 + t)
-        ow = accuracy(agg_ow(A, K, acc), truth)
-        mv = accuracy(agg_mv(A, K, np.random.default_rng(9 + t)), truth)
-        if ow > mv + 1e-9:
-            wins += 1
-        gaps.append(ow - mv)
-    return dict(win_rate=wins / n_trials,
-                mean_gap=float(np.mean(gaps)),
-                min_gap=float(np.min(gaps)), max_gap=float(np.max(gaps)))
-
-
 def main():
     t0 = time.time()
     out = {}
@@ -125,12 +105,6 @@ def main():
               f"-> {r['order_ok']}")
         print(f"        gap ISP-MV sim {r['sim_isp_mv']:.3f} vs cf {r['cf_isp_mv']:.3f} ; "
               f"MV-SP sim {r['sim_mv_sp']:.3f} vs cf {r['cf_mv_sp']:.3f}")
-
-    print("\n" + "=" * 70); print("c5 / 16-model ensembles: OW > MV win-rate"); print("=" * 70)
-    e = c5_ensemble(); out["c5_ensemble"] = e
-    print(f"  OW > MV in {e['win_rate']*100:.1f}% of 16-model ensembles "
-          f"(mean gap {e['mean_gap']*100:.2f}%, range {e['min_gap']*100:.2f}%..{e['max_gap']*100:.2f}%)")
-    print("  paper: OW-L > MV in 97.92% of cases (+0.54%..+14.20%)")
 
     print("\n" + "=" * 70); print("c6 / Corollary 1: K=2 optimal weights = logit(x_i) (Bradley-Terry)"); print("=" * 70)
     x = np.array(ACC); w = sigma_K_inv(x, 2)
@@ -211,6 +185,29 @@ def main():
         print(f"CLAIM_3_VERIFIER_FAILED exit={completed.returncode}")
         raise SystemExit(completed.returncode)
     print("CUMULATIVE_VERDICT claim_3=VERIFIED")
+
+    print("\n" + "=" * 70)
+    print("c5 / exact 48-row Appendix E.4 aggregate")
+    print("=" * 70)
+    claim5_verifier = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        ".openresearch",
+        "artifacts",
+        "claim_5",
+        "verifier.py",
+    )
+    if not os.path.isfile(claim5_verifier):
+        claim5_verifier = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+            "evidence",
+            "claim-5",
+            "verifier.py",
+        )
+    completed = subprocess.run([sys.executable, claim5_verifier], check=False)
+    if completed.returncode != 0:
+        print(f"CLAIM_5_VERIFIER_FAILED exit={completed.returncode}")
+        raise SystemExit(completed.returncode)
+    print("CUMULATIVE_VERDICT claim_5=VERIFIED")
 
 
 if __name__ == "__main__":

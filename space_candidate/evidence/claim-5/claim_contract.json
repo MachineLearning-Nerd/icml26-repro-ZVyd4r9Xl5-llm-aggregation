@@ -1,0 +1,30 @@
+{
+  "claim_id": "claim_5",
+  "paper_statement": "Across the 16 one-model-per-family ensembles evaluated on each of UltraFeedback, MMLU, and ARMMAN, OW-L beats MV in 97.92% of dataset-ensemble cases. MV is never the best proposed method, and the per-case lift of the best of OW-L, OW-I, and ISP over MV ranges from 0.54 to 14.20 percentage points.",
+  "source": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2510.01499",
+    "retrieved_at_utc": "2026-07-28T17:44:20Z",
+    "sha256": "f9f8bd43851f5d7c44cc21550d2ee2a85bf2bdf20f94b0fdb2a50a76d1406fd0",
+    "statement_anchor": "#S5.SS4.p3",
+    "ultrafeedback_table_anchor": "#A5.T4",
+    "mmlu_table_anchor": "#A5.T5",
+    "armman_table_anchor": "#A5.T6"
+  },
+  "domain": {
+    "model_families": ["GPT", "Qwen", "Llama", "Phi"],
+    "strong_or_weak_per_family": 2,
+    "ensembles_per_dataset": 16,
+    "datasets": ["UltraFeedback", "MMLU", "ARMMAN"],
+    "total_dataset_ensemble_cases": 48
+  },
+  "source_table_csv_sha256": "b6d0ce1689892c0ca44709291427da43a027362515c4aa18aeaecd256ece5423",
+  "acceptance": [
+    "all 48 table rows and the full 2x2x2x2 ensemble design are present",
+    "OW-L is strictly more accurate than MV in exactly 47/48 cases, which rounds to 97.92%",
+    "for each case take max(OW-L, OW-I, ISP)-MV; the exact published two-decimal range is 0.54..14.20 percentage points",
+    "an independent integer-arithmetic checker agrees",
+    "count, range, and quantifier-conflation negative controls are rejected",
+    "verifier exits nonzero on any failure"
+  ],
+  "interpretation_guard": "The 0.54..14.20 range does not describe OW-L alone. OW-L's own signed range in the published tables is -0.51..14.20 percentage points."
+}
