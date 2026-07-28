@@ -1,0 +1,24 @@
+---
+title: "Optimal Weighted LLM Aggregation (OWL)"
+emoji: 🎯
+colorFrom: yellow
+colorTo: red
+sdk: static
+pinned: false
+tags:
+ - trackio
+ - trackio-logbook
+ - open-experiment
+ - icml2026-repro
+ - paper-ZVyd4r9Xl5
+---
+
+# Optimal Weighted LLM Aggregation (OWL)
+
+Current verification is listed first in the logbook. Claim 1 is **VERIFIED**
+with a universal proof certificate, exact checker, and negative control. The
+previous one-page executive summary is retained as **Historical rejected
+baseline**.
+
+This is an intermediate candidate artifact. Claims 2–6 are not yet
+release-ready, and no score increase is claimed.

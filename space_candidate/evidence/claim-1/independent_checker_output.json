@@ -1,0 +1,63 @@
+{
+  "arithmetic": "fractions.Fraction",
+  "cases": [
+    {
+      "K": 2,
+      "N": 1,
+      "accuracies": [
+        "1/3"
+      ],
+      "mismatches": [],
+      "profiles_exhausted": 2
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "accuracies": [
+        "2/3",
+        "3/4",
+        "4/5"
+      ],
+      "mismatches": [],
+      "profiles_exhausted": 8
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "accuracies": [
+        "1/5",
+        "1/3",
+        "3/4"
+      ],
+      "mismatches": [],
+      "profiles_exhausted": 27
+    },
+    {
+      "K": 4,
+      "N": 4,
+      "accuracies": [
+        "1/5",
+        "1/4",
+        "3/5",
+        "4/5"
+      ],
+      "mismatches": [],
+      "profiles_exhausted": 256
+    },
+    {
+      "K": 5,
+      "N": 3,
+      "accuracies": [
+        "1/6",
+        "1/5",
+        "5/6"
+      ],
+      "mismatches": [],
+      "profiles_exhausted": 125
+    }
+  ],
+  "imports_production_aggregation": false,
+  "status": "PASS",
+  "total_mismatches": 0,
+  "total_profiles_exhausted": 418
+}
