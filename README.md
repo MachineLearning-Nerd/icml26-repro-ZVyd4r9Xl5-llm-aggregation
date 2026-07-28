@@ -36,7 +36,7 @@ All experiment nodes inherit the exact command `uv run python repro/src/verify.p
 | [`orx/claim-5-exact-48-row-ensemble-aggregate`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/claim-5-exact-48-row-ensemble-aggregate) | Exact Appendix table audit | `uv run python repro/src/verify.py` | VERIFIED | HF cpu-upgrade, 85 s |
 | [`orx/claim-6-bradley-terry-inverse-logit-certificate`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/claim-6-bradley-terry-inverse-logit-certificate) | Universal BT/logit proof | `uv run python repro/src/verify.py` | VERIFIED | HF cpu-upgrade, 79 s |
 | [`orx/claim-4-four-route-real-data-access-audit`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/claim-4-four-route-real-data-access-audit) | Three verification routes + mandatory falsification | `uv run python repro/src/verify.py` | BLOCKED | HF cpu-upgrade, 90 s |
-| [`orx/final-report-notebook-and-release-gates`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/final-report-notebook-and-release-gates) | Cumulative release regression | `uv run python repro/src/verify.py` | Release candidate | HF cpu-upgrade |
+| [`orx/final-report-notebook-and-release-gates`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/final-report-notebook-and-release-gates) | Cumulative release regression | `uv run python repro/src/verify.py` | 5 VERIFIED, 1 BLOCKED | HF cpu-upgrade, 95 s |
 | `master` | Publication surface | Not run as an experiment (publication surface) | Reader-facing mirror | No experiment compute |
 
 ## Reproduce

@@ -143,7 +143,7 @@ on Hugging Face `cpu-upgrade` (8 allocated vCPU, 32 GB RAM) with
 | [`orx/claim-5-exact-48-row-ensemble-aggregate`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/claim-5-exact-48-row-ensemble-aggregate) | All Appendix rows | `uv run python repro/src/verify.py` | VERIFIED | HF cpu-upgrade, 85 s |
 | [`orx/claim-6-bradley-terry-inverse-logit-certificate`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/claim-6-bradley-terry-inverse-logit-certificate) | BT/logit proof | `uv run python repro/src/verify.py` | VERIFIED | HF cpu-upgrade, 79 s |
 | [`orx/claim-4-four-route-real-data-access-audit`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/claim-4-four-route-real-data-access-audit) | Three verification routes + falsification | `uv run python repro/src/verify.py` | BLOCKED | HF cpu-upgrade, 90 s |
-| [`orx/final-report-notebook-and-release-gates`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/final-report-notebook-and-release-gates) | Cumulative release regression | `uv run python repro/src/verify.py` | Pending at report draft | HF cpu-upgrade |
+| [`orx/final-report-notebook-and-release-gates`](https://github.com/MachineLearning-Nerd/icml26-repro-ZVyd4r9Xl5-llm-aggregation/tree/orx/final-report-notebook-and-release-gates) | Cumulative release regression | `uv run python repro/src/verify.py` | 5 VERIFIED, 1 BLOCKED | HF cpu-upgrade, 95 s |
 | `master` | Publication surface | Not run as an experiment (publication surface) | Reader-facing mirror | No experiment compute |
 
 The first baseline job failed before Python because `uv` was absent in its
@@ -153,15 +153,16 @@ failures remain preserved in the run history.
 
 ## Compute, provenance, and release action
 
-Before the final regression, the formal job wall time was 18m56s across 16
+Through the winning regression, formal job wall time was 20m31s across 17
 successful/failed HF jobs. At the documented `$0.0005/min` cpu-upgrade rate,
-the upper-bound cost was about `$0.0095`; claim-specific runtimes are recorded
+the upper-bound cost was about `$0.0103`; claim-specific runtimes are recorded
 on every canonical page. Processes reported 64 logical CPUs, but the
 authoritative allocation was 8 vCPU.
 
 The winning cumulative branch is
-`orx/final-report-notebook-and-release-gates`; its final SHA is recorded after
-the release regression. The exact publication action is a text-only
+`orx/final-report-notebook-and-release-gates`, Git SHA
+`000a32f61fe88d7f5e16f9df47d05ed4dc99a077`, verified by run
+`3a23c0a0-5be2-4ac4-821a-bfe7f1ccea51`. The exact publication action is a text-only
 Hugging Face API commit to the existing `DineshAI/ZVyd4r9Xl5` Space, followed
 by a fresh download and hash/traversal check. The same reader-facing text is
 then mirrored to GitHub `master`. No second Space will be created, and no score
