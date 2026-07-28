@@ -82,7 +82,8 @@ orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Claim 6 eval
 orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Claim 4 four-route real-data access audit" --parent <direct-parent-UUID>
 orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Claim 4 evaluator-visible BLOCKED evidence" --parent <direct-parent-UUID>
 orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Final report notebook and release gates" --parent <direct-parent-UUID>
-orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Release metadata and evaluator-blind audit" --parent 6353f868-c6b5-4894-b454-5314c0eaa9e6
+orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Release metadata and evaluator-blind audit" --parent 6353f868-a5bd-47f0-b985-b6c1d6e1ed4a
+orx create-experiment cbb4a316-4523-447c-9a95-11a79d0d9206 --title "Release gate closure and publication candidate" --parent f8a7af6d-82fa-4f36-8fca-31649a15c4cc
 ```
 
 ## Git mutation pattern
@@ -136,6 +137,7 @@ ee1eebf8-66c8-4692-96c4-086026423722
 6b93e113-6b33-46e3-9c5e-aa67665a5f53
 2e4093b4-7d98-446d-9a8e-2b0892fea017
 3a23c0a0-5be2-4ac4-821a-bfe7f1ccea51
+299115bb-2200-40b8-8b8c-fadcbd392d8c
 ```
 
 ## Evaluator-blind release checks
