@@ -1,0 +1,8 @@
+{
+  "sign_mutation_bad_digest": "11447b8dadc529f3217d8f2b96182aec6c119b8ea067f31e5dc317897f4cf125",
+  "sign_mutation_changes_predictions": true,
+  "sign_mutation_prediction_mismatches": 38,
+  "sign_mutation_reference_digest": "2fd3c14aa3589df7ec9df5184aee89ceac49722459629f4ff330109ddd878696",
+  "uniform_pairwise_makes_isp_identical_to_mv": true,
+  "uniform_pairwise_prediction_mismatches": 0
+}

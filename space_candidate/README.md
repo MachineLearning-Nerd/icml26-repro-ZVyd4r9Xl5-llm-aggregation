@@ -15,10 +15,11 @@ tags:
 
 # Optimal Weighted LLM Aggregation (OWL)
 
-Current verification is listed first in the logbook. Claims 1 and 2 are
+Current verification is listed first in the logbook. Claims 1, 2, and 3 are
 **VERIFIED** with universal proof certificates, exact independent checkers,
-and premise-specific negative controls. The previous one-page executive
-summary is retained as **Historical rejected baseline**.
+calibrated full-scale simulation, and premise-specific negative controls. The
+previous one-page executive summary is retained as **Historical rejected
+baseline**.
 
-This is an intermediate candidate artifact. Claims 3–6 are not yet
+This is an intermediate candidate artifact. Claims 4–6 are not yet
 release-ready, and no score increase is claimed.

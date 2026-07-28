@@ -1,0 +1,10 @@
+{
+  "K": 4,
+  "M": 256,
+  "digest": "1b6a3cf798b3062851bd1a4be51fa37bc8eeb7d2265f44e841807302c4d890fd",
+  "imports_production_aggregation": false,
+  "isp_accuracy": 0.9453125,
+  "mv_accuracy": 0.94921875,
+  "seed": 19,
+  "status": "PASS"
+}

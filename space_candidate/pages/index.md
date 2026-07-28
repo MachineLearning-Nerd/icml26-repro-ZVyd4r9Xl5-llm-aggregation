@@ -9,6 +9,7 @@ The judged revision remains preserved, but its executive summary is a
 | --- |
 | [Claim 1 — OW is Bayes-optimal (VERIFIED)](#/claim-1) |
 | [Claim 2 — ISP ≥ MV ≥ SP (VERIFIED)](#/claim-2) |
+| [Claim 3 — full simulation (VERIFIED)](#/claim-3) |
 | [Historical rejected baseline](#/executive-summary) |
 
 ## Evaluator-visible evidence matrix
@@ -17,7 +18,7 @@ The judged revision remains preserved, but its executive summary is a
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | [Claim 1](#/claim-1) | Yes | Yes | Yes | PASS | PASS | Yes | VERIFIED |
 | 2 | [Claim 2](#/claim-2) | Yes | Yes | Yes | PASS | PASS | Yes | VERIFIED |
-| 3 | Pending | Pending | Pending | Pending | Pending | Pending | Pending | Not release-ready |
+| 3 | [Claim 3](#/claim-3) | Yes | Yes | Yes | PASS | PASS | Yes | VERIFIED |
 | 4 | Pending | Pending | Pending | Pending | Pending | Pending | Pending | Not release-ready |
 | 5 | Pending | Pending | Pending | Pending | Pending | Pending | Pending | Not release-ready |
 | 6 | Pending | Pending | Pending | Pending | Pending | Pending | Pending | Not release-ready |
