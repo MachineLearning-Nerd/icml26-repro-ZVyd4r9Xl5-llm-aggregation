@@ -1,0 +1,20 @@
+{
+  "ARMMAN": {
+    "K": 2,
+    "mv": "85.24",
+    "ow_l": "85.78",
+    "retained_examples": 11785
+  },
+  "MMLU": {
+    "K": 4,
+    "mv": "89.32",
+    "ow_l": "90.37",
+    "retained_examples": 109820
+  },
+  "UltraFeedback": {
+    "K": 2,
+    "mv": "72.21",
+    "ow_l": "73.66",
+    "retained_examples": 56380
+  }
+}

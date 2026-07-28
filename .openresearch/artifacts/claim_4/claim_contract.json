@@ -1,0 +1,39 @@
+{
+  "claim_id": "claim_4",
+  "paper_statement": "For the strong four-model ensemble, OW-L has 73.66%, 90.37%, and 85.78% accuracy on UltraFeedback, MMLU, and ARMMAN, exceeding MV at 72.21%, 89.32%, and 85.24%.",
+  "source": {
+    "html_url": "https://ar5iv.labs.arxiv.org/html/2510.01499",
+    "html_retrieved_at_utc": "2026-07-28T17:44:20Z",
+    "html_sha256": "f9f8bd43851f5d7c44cc21550d2ee2a85bf2bdf20f94b0fdb2a50a76d1406fd0",
+    "source_archive_url": "https://export.arxiv.org/e-print/2510.01499",
+    "source_archive_retrieved_at_utc": "2026-07-28T19:02:00Z",
+    "source_archive_sha256": "32d901cbb84cc5c1a89be6f183d6fa4f7685aeda9af0d79ce34a489b10fb9e99",
+    "table_anchor": "#S5.T3",
+    "real_data_section_anchor": "#S5.SS4",
+    "setup_anchor": "#A5.SS3"
+  },
+  "strong_ensemble": [
+    "GPT-4o-2024-11-20",
+    "Qwen2.5-Instruct-14B",
+    "Llama3.1-8B-Instruct",
+    "Phi-4"
+  ],
+  "datasets": {
+    "UltraFeedback": {"retained_examples": 56380, "K": 2},
+    "MMLU": {"retained_examples": 109820, "K": 4},
+    "ARMMAN": {"retained_examples": 11785, "K": 2}
+  },
+  "acceptance_for_verified": [
+    "use the exact retained examples and recorded shuffle maps",
+    "use the exact four named model revisions and inference settings",
+    "regenerate or obtain the exact per-example model predictions",
+    "run an independently checked implementation of OW-L and MV",
+    "reproduce the six reported rounded accuracies from raw predictions"
+  ],
+  "acceptance_for_falsified": [
+    "use the same exact retained examples, labels, shuffle maps, model revisions, inference settings, and OW-L definition",
+    "produce a reproducible contradiction of at least one reported point value or superiority relation",
+    "exclude stochastic-output drift and implementation mismatch as explanations"
+  ],
+  "current_verdict": "BLOCKED"
+}
