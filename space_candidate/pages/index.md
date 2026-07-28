@@ -11,6 +11,7 @@ The judged revision remains preserved, but its executive summary is a
 | [Claim 2 — ISP ≥ MV ≥ SP (VERIFIED)](#/claim-2) |
 | [Claim 3 — full simulation (VERIFIED)](#/claim-3) |
 | [Claim 5 — exact 48-case ensemble aggregate (VERIFIED)](#/claim-5) |
+| [Claim 6 — Bradley–Terry inverse-logit certificate (VERIFIED)](#/claim-6) |
 | [Historical rejected baseline](#/executive-summary) |
 
 ## Evaluator-visible evidence matrix
@@ -22,6 +23,6 @@ The judged revision remains preserved, but its executive summary is a
 | 3 | [Claim 3](#/claim-3) | Yes | Yes | Yes | PASS | PASS | Yes | VERIFIED |
 | 4 | Pending | Pending | Pending | Pending | Pending | Pending | Pending | Not release-ready |
 | 5 | [Claim 5](#/claim-5) | Yes | Yes: all 48 rows | Yes | PASS | PASS | Yes | VERIFIED |
-| 6 | Pending | Pending | Pending | Pending | Pending | Pending | Pending | Not release-ready |
+| 6 | [Claim 6](#/claim-6) | Yes | Yes | Yes | PASS | PASS | Yes | VERIFIED |
 
 This is an intermediate candidate milestone, not a publication forecast.

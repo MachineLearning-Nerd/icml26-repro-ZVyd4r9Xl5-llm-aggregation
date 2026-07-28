@@ -4,7 +4,7 @@ c1 Theorem 1: OW == Bayes-optimal MAP (omega_i = sigma_K^{-1}(x_i)).  EXACT.
 c2 Theorem 2: E[Adv_ISP] >= E[Adv_MV] >= E[Adv_SP]; closed-form gaps match.
 c3 Table: ISP 90.48 vs MV 85.13 (K=2), 94.45 vs 92.64 (K=4); gap Theta(1/K).
 c5 Appendix E.4: exact 48-row OW-L/MV aggregate and best-method lift range.
-c6 Corollary 1: K=2 optimal weights proportional to logit(x_i) (Bradley-Terry).
+c6 Corollary 1: universal binary inverse-logit/Bradley-Terry certificate.
 
 Run: python repro/src/verify.py
 """
@@ -106,12 +106,6 @@ def main():
         print(f"        gap ISP-MV sim {r['sim_isp_mv']:.3f} vs cf {r['cf_isp_mv']:.3f} ; "
               f"MV-SP sim {r['sim_mv_sp']:.3f} vs cf {r['cf_mv_sp']:.3f}")
 
-    print("\n" + "=" * 70); print("c6 / Corollary 1: K=2 optimal weights = logit(x_i) (Bradley-Terry)"); print("=" * 70)
-    x = np.array(ACC); w = sigma_K_inv(x, 2)
-    c6_ok = np.allclose(w, np.log(x / (1 - x)))
-    out["c6_ok"] = bool(c6_ok)
-    print(f"  K=2 weights {np.round(w,3)} ; logit(x) {np.round(np.log(x/(1-x)),3)}  -> {c6_ok}")
-
     out["elapsed_sec"] = round(time.time() - t0, 1)
     os.makedirs("outputs", exist_ok=True)
     json.dump(out, open("outputs/verify_results.json", "w"), indent=2)
@@ -208,6 +202,29 @@ def main():
         print(f"CLAIM_5_VERIFIER_FAILED exit={completed.returncode}")
         raise SystemExit(completed.returncode)
     print("CUMULATIVE_VERDICT claim_5=VERIFIED")
+
+    print("\n" + "=" * 70)
+    print("c6 / universal inverse-logit and Bradley-Terry certificate")
+    print("=" * 70)
+    claim6_verifier = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+        ".openresearch",
+        "artifacts",
+        "claim_6",
+        "verifier.py",
+    )
+    if not os.path.isfile(claim6_verifier):
+        claim6_verifier = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+            "evidence",
+            "claim-6",
+            "verifier.py",
+        )
+    completed = subprocess.run([sys.executable, claim6_verifier], check=False)
+    if completed.returncode != 0:
+        print(f"CLAIM_6_VERIFIER_FAILED exit={completed.returncode}")
+        raise SystemExit(completed.returncode)
+    print("CUMULATIVE_VERDICT claim_6=VERIFIED")
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@
     "icml2026-repro",
     "paper-ZVyd4r9Xl5"
   ],
-  "updated_at": "2026-07-28T18:47:23+00:00",
+  "updated_at": "2026-07-28T18:54:00+00:00",
   "root": {
     "slug": "index",
     "title": "Optimal Weighted LLM Aggregation (OWL)",
@@ -36,6 +36,12 @@
         "slug": "claim-5",
         "title": "Claim 5 — exact ensemble aggregate (VERIFIED)",
         "file": "pages/claim-5/page.md",
+        "children": []
+      },
+      {
+        "slug": "claim-6",
+        "title": "Claim 6 — Bradley–Terry certificate (VERIFIED)",
+        "file": "pages/claim-6/page.md",
         "children": []
       },
       {

@@ -15,12 +15,12 @@ tags:
 
 # Optimal Weighted LLM Aggregation (OWL)
 
-Current verification is listed first in the logbook. Claims 1, 2, 3, and 5 are
+Current verification is listed first in the logbook. Claims 1, 2, 3, 5, and 6 are
 **VERIFIED** with universal proof certificates, exact independent checkers,
 calibrated full-scale simulation, the complete 48-row ensemble table audit,
 and claim-specific negative controls. The previous one-page executive summary
 is retained as **Historical rejected baseline**.
 
-This is an intermediate candidate artifact. Claims 4 and 6 are not yet
-release-ready, and no score increase is claimed. Claim 5 verifies the published
+This is an intermediate candidate artifact. Claim 4 is not yet release-ready,
+and no score increase is claimed. Claim 5 verifies the published
 aggregate but does not substitute for Claim 4's unreleased prediction caches.
