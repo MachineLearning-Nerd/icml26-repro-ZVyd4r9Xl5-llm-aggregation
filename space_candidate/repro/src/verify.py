@@ -5,6 +5,7 @@ c2 Theorem 2: E[Adv_ISP] >= E[Adv_MV] >= E[Adv_SP]; closed-form gaps match.
 c3 Table: ISP 90.48 vs MV 85.13 (K=2), 94.45 vs 92.64 (K=4); gap Theta(1/K).
 c5 Appendix E.4: exact 48-row OW-L/MV aggregate and best-method lift range.
 c6 Corollary 1: universal binary inverse-logit/Bradley-Terry certificate.
+c4 Table 3: four-route real-data evidence audit; BLOCKED without raw caches.
 
 Run: python repro/src/verify.py
 """

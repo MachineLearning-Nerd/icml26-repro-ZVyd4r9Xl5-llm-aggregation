@@ -1,0 +1,29 @@
+{
+  "claim_id": "claim_3",
+  "paper_statement": "For N=4, M=10000, and accuracies 0.6,0.7,0.8,0.9, ISP reports 90.48% versus MV 85.13% at K=2 and 94.45% versus 92.64% at K=4; the ISP-MV gap shrinks with K.",
+  "source": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2510.01499",
+    "retrieved_at_utc": "2026-07-28T17:44:20Z",
+    "sha256": "f9f8bd43851f5d7c44cc21550d2ee2a85bf2bdf20f94b0fdb2a50a76d1406fd0",
+    "section_anchor": "#S5.SS1",
+    "table_anchor": "#S5.T2",
+    "figure_anchor": "#A5.F1"
+  },
+  "exact_setup": {
+    "N": 4,
+    "M": 10000,
+    "accuracies": [0.6, 0.7, 0.8, 0.9],
+    "paper_K": [2, 4, 6, 8, 10],
+    "pairwise_information": "empirical, estimated on the M simulated questions",
+    "mv_ties": "uniform random"
+  },
+  "pilot_purpose": "measure runtime and across-seed variance before fixing full replicate count",
+  "final_acceptance": [
+    "paper numbers are assessed against the calibrated distribution of faithful M=10000 runs",
+    "paired ISP-MV uncertainty is reported",
+    "extended K sweep reports a seed-wise scaling distribution",
+    "independent implementation digest matches",
+    "uniform-information control and sign-mutation control behave as intended",
+    "verifier exits nonzero on implementation or control failure"
+  ]
+}

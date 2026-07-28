@@ -1,0 +1,63 @@
+{
+  "claim_id": "claim_4",
+  "routes": [
+    {
+      "route_id": "route_1_release_discovery",
+      "interpretation": "A faithful rerun may use an author-released code package and exact model-prediction cache instead of regenerating inference.",
+      "method": "Search the arXiv source archive, GitHub repository metadata, and Hugging Face dataset metadata for the exact title, arXiv identifier, algorithm name, code, and prediction caches.",
+      "commands": [
+        "curl -L --fail -A 'OpenResearch-Reproduction/1.0' https://export.arxiv.org/e-print/2510.01499",
+        "GitHub repository-search API queries for the exact title and 2510.01499",
+        "Hugging Face dataset API queries for the exact title, 2510.01499, and Inverse Surprisingly Popular"
+      ],
+      "result": "No paper code repository or prediction-cache dataset was discoverable. The source archive contains TeX, two figures, and style files but no executable experiment code or predictions.",
+      "control": "The same Hugging Face API search found the known public UltraFeedback and MMLU datasets, so the discovery path was capable of returning relevant public datasets.",
+      "resolved": false
+    },
+    {
+      "route_id": "route_2_faithful_regeneration",
+      "interpretation": "Regenerate the exact per-example predictions from the paper's documented prompts and inference settings, then rerun OW-L.",
+      "method": "Audit every required data, model, inference, and implementation input against the paper source and authorized CPU-only compute.",
+      "commands": [
+        "Inspect appendix/app_exp.tex in source archive SHA-256 32d901cbb84cc5c1a89be6f183d6fa4f7685aeda9af0d79ce34a489b10fb9e99",
+        "Hugging Face dataset API queries for UltraFeedback, MMLU, and ARMMAN call-record data"
+      ],
+      "result": "UltraFeedback and MMLU bases are public, but exact retained row IDs and shuffle maps are absent. ARMMAN's 12,000 women's health/call records and labels are not released. GPT-4o-2024-11-20 was queried through an unspecified Microsoft Azure deployment at temperature 1.0/top_p 1.0. The other models were run with vLLM on an A100, which is outside the CPU-only authorization. The paper's OW-L implementation is absent.",
+      "control": "Public-dataset searches positively locate UltraFeedback and MMLU while returning no ARMMAN record dataset.",
+      "resolved": false
+    },
+    {
+      "route_id": "route_3_aggregate_reconstruction",
+      "interpretation": "Perhaps the published table and retained sample sizes uniquely determine the underlying correct counts and can independently reconstruct the result.",
+      "method": "Enumerate every integer correct count that rounds half-up to each reported two-decimal percentage and audit whether aggregate accuracies determine pairwise predictions needed by OW-L.",
+      "commands": [
+        "uv run python .openresearch/artifacts/claim_4/independent_checker.py"
+      ],
+      "result": "Five of six cells admit multiple integer correct counts (2 to 11 possibilities); only ARMMAN OW-L is unique at the count level. Even a unique method-level correct count does not determine which rows were correct or any four-model joint prediction pattern. OW-L consumes pairwise prediction correlations, so Table 3 cannot regenerate its input.",
+      "control": "The checker exactly recovers the six displayed percentages and rejects a one-hundredth mutation of UltraFeedback OW-L.",
+      "resolved": false
+    },
+    {
+      "route_id": "route_4_assumption_matching_falsification",
+      "interpretation": "Seek a counterexample to the exact empirical point claims under the paper's own data, model, prompt, shuffle, and aggregation configuration.",
+      "method": "Restate the finite empirical contract and check whether a contradiction can be attributed to the same experimental object rather than a nearby dataset, stochastic rerun, proxy model, or alternate OW-L implementation.",
+      "commands": [
+        "uv run python .openresearch/artifacts/claim_4/verifier.py"
+      ],
+      "result": "No valid falsification is possible from published aggregates. Any newly sampled GPT output at temperature 1.0, substitute open model, public-only dataset subset, synthetic ARMMAN row, or reimplemented optimizer would change the experimental object. Such a mismatch would not contradict the reported run.",
+      "control": "A table-only pseudo-evidence bundle is deliberately rejected as neither verification nor falsification.",
+      "resolved": false,
+      "valid_counterexample_found": false
+    }
+  ],
+  "required_capabilities": {
+    "exact_retained_row_ids": false,
+    "exact_shuffle_maps": false,
+    "exact_strong_model_predictions": false,
+    "armman_records_and_labels": false,
+    "gpt_azure_deployment_access": false,
+    "paper_ow_l_implementation": false
+  },
+  "verdict": "BLOCKED",
+  "unblocker": "Release the exact retained row IDs, shuffle maps, per-example predictions for the four strong models, ARMMAN records/labels under an appropriate data-use agreement, the OW-L implementation, and the stochastic inference provenance; or release a reproducible author-generated prediction cache plus code sufficient to regenerate Table 3."
+}

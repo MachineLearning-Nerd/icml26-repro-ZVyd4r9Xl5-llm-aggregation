@@ -1,0 +1,93 @@
+{
+  "claim_id": "claim_5",
+  "configured_workers": 1,
+  "cpu_count_visible": 64,
+  "git_sha": "fdcb642148ffb3872e43ac2d5f013b5ef4c91d3a",
+  "independent_checker": {
+    "best_lift_max_hundredths_pp": 1420,
+    "best_lift_min_hundredths_pp": 54,
+    "checker": "independent integer hundredths-of-percentage-point route",
+    "owl_fraction": "47/48",
+    "owl_percent": 97.92,
+    "owl_wins": 47,
+    "per_dataset": {
+      "ARMMAN": {
+        "owl_wins": 15,
+        "rows": 16,
+        "unique_ensembles": 16
+      },
+      "MMLU": {
+        "owl_wins": 16,
+        "rows": 16,
+        "unique_ensembles": 16
+      },
+      "UltraFeedback": {
+        "owl_wins": 16,
+        "rows": 16,
+        "unique_ensembles": 16
+      }
+    },
+    "rows": 48,
+    "status": "PASS"
+  },
+  "negative_controls": {
+    "count_mutation_owl_wins": 46,
+    "count_mutation_rejected": true,
+    "owl_only_range_conflation_rejected": true,
+    "owl_only_signed_range": [
+      "-0.51",
+      "14.20"
+    ],
+    "range_mutation_best_max": "11.58",
+    "range_mutation_rejected": true
+  },
+  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+  "python": "3.12.12",
+  "quantifier_note": "97.92%=47/48 OW-L wins; 0.54..14.20 pp is per-row best-of-(OW-L,OW-I,ISP) lift, not OW-L-only lift",
+  "runtime_seconds": 0.055232,
+  "scope": "exact arithmetic reconstruction of all 48 published Appendix E.4 rows",
+  "source_table_csv_sha256": "b6d0ce1689892c0ca44709291427da43a027362515c4aa18aeaecd256ece5423",
+  "status": "PASS",
+  "summary": {
+    "best_method_lift_max_percentage_points": "14.20",
+    "best_method_lift_min_percentage_points": "0.54",
+    "complete_2x2x2x2_design": true,
+    "datasets": [
+      "ARMMAN",
+      "MMLU",
+      "UltraFeedback"
+    ],
+    "owl_case_count": 48,
+    "owl_signed_lift_max_percentage_points": "14.20",
+    "owl_signed_lift_min_percentage_points": "-0.51",
+    "owl_win_count": 47,
+    "owl_win_percent": "97.92",
+    "row_count": 48,
+    "rows_per_dataset": {
+      "ARMMAN": 16,
+      "MMLU": 16,
+      "UltraFeedback": 16
+    },
+    "strong_ensemble": {
+      "ARMMAN": {
+        "isp": "85.78",
+        "mv": "85.24",
+        "ow_i": "85.78",
+        "ow_l": "85.78"
+      },
+      "MMLU": {
+        "isp": "90.01",
+        "mv": "89.32",
+        "ow_i": "90.37",
+        "ow_l": "90.37"
+      },
+      "UltraFeedback": {
+        "isp": "73.26",
+        "mv": "72.21",
+        "ow_i": "73.66",
+        "ow_l": "73.66"
+      }
+    }
+  },
+  "verdict": "VERIFIED"
+}

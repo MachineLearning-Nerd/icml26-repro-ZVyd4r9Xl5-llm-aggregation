@@ -1,0 +1,15 @@
+{
+  "endpoint_limits": {
+    "x_to_0": "-infinity",
+    "x_to_1": "+infinity"
+  },
+  "finite_domain_endpoint_rejections": {
+    "0.0": true,
+    "1.0": true
+  },
+  "negative_common_scale_reverses_argmax": true,
+  "positive_common_scale_preserves_argmax": true,
+  "wrong_log_probability_transform_rejected": true,
+  "wrong_transform_input": 0.75,
+  "wrong_transform_sigmoid_output": 0.42857142857142855
+}

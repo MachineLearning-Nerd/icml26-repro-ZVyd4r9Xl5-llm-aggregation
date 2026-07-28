@@ -1,0 +1,38 @@
+{
+  "claim_id": "claim_1",
+  "domain": {
+    "N": "integer >= 1",
+    "K": "integer >= 2",
+    "x_i": "real with 0 < x_i < 1",
+    "v_i_s": "{0,1}"
+  },
+  "per_agent_identity": {
+    "meaning": "x_i^v * ((1-x_i)/(K-1))^(1-v) = ((1-x_i)/(K-1)) * (x_i*(K-1)/(1-x_i))^v",
+    "original": {
+      "K_minus_1": [-1, 1],
+      "one_minus_x_i": [1, -1],
+      "x_i": [0, 1]
+    },
+    "common": {
+      "K_minus_1": [-1, 0],
+      "one_minus_x_i": [1, 0]
+    },
+    "vote_ratio": {
+      "K_minus_1": [0, 1],
+      "one_minus_x_i": [0, -1],
+      "x_i": [0, 1]
+    }
+  },
+  "inverse_link": {
+    "sigma_K": "exp(z)/(K-1+exp(z))",
+    "odds": "x_i*(K-1)/(1-x_i)",
+    "inverse": "log(x_i*(K-1)/(1-x_i))"
+  },
+  "positivity": {
+    "x_i": "positive",
+    "1-x_i": "positive",
+    "K-1": "positive",
+    "log": "strictly increasing on positive reals"
+  },
+  "conclusion": "The uniform prior and label-independent positive common factor cancel from the posterior argmax. Taking log of the remaining product yields exactly Algorithm 1's OW score, so the complete argmax sets agree."
+}

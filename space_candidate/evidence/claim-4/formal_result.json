@@ -1,0 +1,45 @@
+{
+  "audit_status": "PASS",
+  "claim_id": "claim_4",
+  "configured_workers": 1,
+  "cpu_count_visible": 64,
+  "git_sha": "75d54637917cc31e247149c389154b73f13272af",
+  "checks": {
+    "all_required_capability_keys_present": true,
+    "all_three_published_lifts_positive": true,
+    "concrete_unblocker_recorded": true,
+    "each_route_records_interpretation_command_result_and_control": true,
+    "exact_contract_matches_source_table": true,
+    "faithful_rerun_not_ready": true,
+    "first_three_routes_unresolved": true,
+    "four_materially_distinct_methods": true,
+    "four_routes_recorded_in_required_order": true,
+    "independent_checker_passes": true,
+    "mandatory_fourth_route_is_falsification": true,
+    "no_invalid_falsification_claimed": true,
+    "public_search_has_positive_dataset_controls": true,
+    "table_only_negative_control_rejected": true,
+    "verdict_is_blocked": true
+  },
+  "paper_values": {
+    "ARMMAN": {"K": 2, "mv": "85.24", "ow_l": "85.78", "retained_examples": 11785},
+    "MMLU": {"K": 4, "mv": "89.32", "ow_l": "90.37", "retained_examples": 109820},
+    "UltraFeedback": {"K": 2, "mv": "72.21", "ow_l": "73.66", "retained_examples": 56380}
+  },
+  "required_capabilities": {
+    "armman_records_and_labels": false,
+    "exact_retained_row_ids": false,
+    "exact_shuffle_maps": false,
+    "exact_strong_model_predictions": false,
+    "gpt_azure_deployment_access": false,
+    "paper_ow_l_implementation": false
+  },
+  "negative_control": {
+    "purpose": "published aggregates alone must never be accepted as raw reproduction evidence",
+    "status": "PASS",
+    "table_only_bundle_rejected": true
+  },
+  "runtime_seconds": 0.669371,
+  "stochastic": false,
+  "verdict": "BLOCKED"
+}

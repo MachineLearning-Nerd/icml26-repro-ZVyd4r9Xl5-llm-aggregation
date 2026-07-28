@@ -1,0 +1,150 @@
+{
+  "claim_id": "claim_6",
+  "configured_workers": 1,
+  "cpu_count_visible": 64,
+  "git_sha": "94301164890bf3985097517e9e08b1aa46b22fc5",
+  "independent_checker": {
+    "cases": [
+      {
+        "decimal_bt_error": "0.000",
+        "odds": "1/999",
+        "probability": "1/1000",
+        "rational_composition_exact": true
+      },
+      {
+        "decimal_bt_error": "0.0",
+        "odds": "1/9",
+        "probability": "1/10",
+        "rational_composition_exact": true
+      },
+      {
+        "decimal_bt_error": "0.0",
+        "odds": "1/1",
+        "probability": "1/2",
+        "rational_composition_exact": true
+      },
+      {
+        "decimal_bt_error": "1E-60",
+        "odds": "3/1",
+        "probability": "3/4",
+        "rational_composition_exact": true
+      },
+      {
+        "decimal_bt_error": "1E-60",
+        "odds": "9/1",
+        "probability": "9/10",
+        "rational_composition_exact": true
+      },
+      {
+        "decimal_bt_error": "4E-60",
+        "odds": "999/1",
+        "probability": "999/1000",
+        "rational_composition_exact": true
+      }
+    ],
+    "checker": "Fraction algebra plus independent Decimal ln/exp route",
+    "imports_production_code": false,
+    "status": "PASS"
+  },
+  "negative_controls": {
+    "endpoint_limits": {
+      "x_to_0": "-infinity",
+      "x_to_1": "+infinity"
+    },
+    "finite_domain_endpoint_rejections": {
+      "0.0": true,
+      "1.0": true
+    },
+    "negative_common_scale_reverses_argmax": true,
+    "positive_common_scale_preserves_argmax": true,
+    "wrong_log_probability_transform_rejected": true,
+    "wrong_transform_input": 0.75,
+    "wrong_transform_sigmoid_output": 0.42857142857142855
+  },
+  "numerical_examples": [
+    {
+      "accuracy": 0.001,
+      "bt_error": 6.505213034913027e-19,
+      "bt_probability_with_shifted_scores": 0.0009999999999999994,
+      "composition_error": 6.505213034913027e-19,
+      "logit_weight": -6.906754778648554,
+      "sigmoid_of_weight": 0.0009999999999999994
+    },
+    {
+      "accuracy": 0.1,
+      "bt_error": 2.7755575615628914e-17,
+      "bt_probability_with_shifted_scores": 0.10000000000000003,
+      "composition_error": 2.7755575615628914e-17,
+      "logit_weight": -2.197224577336219,
+      "sigmoid_of_weight": 0.10000000000000003
+    },
+    {
+      "accuracy": 0.5,
+      "bt_error": 0,
+      "bt_probability_with_shifted_scores": 0.5,
+      "composition_error": 0,
+      "logit_weight": 0,
+      "sigmoid_of_weight": 0.5
+    },
+    {
+      "accuracy": 0.6,
+      "bt_error": 1.1102230246251565e-16,
+      "bt_probability_with_shifted_scores": 0.6000000000000001,
+      "composition_error": 0,
+      "logit_weight": 0.4054651081081642,
+      "sigmoid_of_weight": 0.6
+    },
+    {
+      "accuracy": 0.75,
+      "bt_error": 1.1102230246251565e-16,
+      "bt_probability_with_shifted_scores": 0.7499999999999999,
+      "composition_error": 0,
+      "logit_weight": 1.0986122886681098,
+      "sigmoid_of_weight": 0.75
+    },
+    {
+      "accuracy": 0.9,
+      "bt_error": 1.1102230246251565e-16,
+      "bt_probability_with_shifted_scores": 0.9000000000000001,
+      "composition_error": 1.1102230246251565e-16,
+      "logit_weight": 2.1972245773362196,
+      "sigmoid_of_weight": 0.8999999999999999
+    },
+    {
+      "accuracy": 0.999,
+      "bt_error": 1.1102230246251565e-16,
+      "bt_probability_with_shifted_scores": 0.9989999999999999,
+      "composition_error": 1.1102230246251565e-16,
+      "logit_weight": 6.906754778648553,
+      "sigmoid_of_weight": 0.9989999999999999
+    }
+  ],
+  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+  "proof_scope": "universal symbolic identity for every x in (0,1)",
+  "python": "3.12.12",
+  "runtime_seconds": 0.052072,
+  "seed": null,
+  "status": "PASS",
+  "stochastic": false,
+  "symbolic_certificate": {
+    "algorithm_1_weight_equality": "omega_i=sigma_2^{-1}(x_i)",
+    "bradley_terry_factorization": "exp(r1)/(exp(r1)+exp(r0))=exp(r1-r0)/(1+exp(r1-r0))=sigma(r1-r0)",
+    "bt_score_difference": "r1-r0=log(p/(1-p))",
+    "composition_identity": "(x/(1-x))/(1+x/(1-x))=x",
+    "corollary_proportionality": "multiplying every weight by one common positive constant preserves the weighted-vote argmax",
+    "cross_multiplication": [
+      "x*(1+z)=z where z=exp(w)>0",
+      "z*(1-x)=x",
+      "z=x/(1-x)",
+      "w=log(x/(1-x)) because exp is bijective R -> (0,infinity)"
+    ],
+    "denominator_positive": true,
+    "domain": "x in (0,1); endpoints are extended-real limits",
+    "inverse_candidate": "w=log(x/(1-x))",
+    "sigma_2": "exp(w)/(1+exp(w))",
+    "solution_positive": true,
+    "solution_unique": true,
+    "status": "PASS"
+  },
+  "verdict": "VERIFIED"
+}

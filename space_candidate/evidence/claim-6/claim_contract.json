@@ -1,0 +1,28 @@
+{
+  "claim_id": "claim_6",
+  "paper_statement": "For K=2, the optimal OW weights are proportional to the inverse logistic of each agent accuracy, connecting OW to the Bradley-Terry model.",
+  "source": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2510.01499",
+    "retrieved_at_utc": "2026-07-28T17:44:20Z",
+    "sha256": "f9f8bd43851f5d7c44cc21550d2ee2a85bf2bdf20f94b0fdb2a50a76d1406fd0",
+    "corollary_anchor": "#Thmcorollary1",
+    "proof_anchor": "#A3.SS2",
+    "algorithm_anchor": "#alg1"
+  },
+  "primary_bt_cross_check": {
+    "paper": "Ouyang et al., Training language models to follow instructions with human feedback",
+    "arxiv": "2203.02155",
+    "anchor": "Equation 1 reward-model loss uses log sigma(r(x,y_w)-r(x,y_l))"
+  },
+  "domain": {
+    "finite_real_identity": "x_i in (0,1)",
+    "endpoint_interpretation": "x=0 and x=1 have -infinity and +infinity extended-real weights; finite Algorithm 1 implementation requires strict interior accuracy"
+  },
+  "acceptance": [
+    "derive sigma_2^{-1}(x)=log(x/(1-x)) symbolically for every x in (0,1)",
+    "derive Bradley-Terry probability as sigma(r_1-r_0), so its inverse score difference is the same logit",
+    "independent exact-rational and high-precision decimal routes agree",
+    "wrong log(x) transform, endpoint-domain, and common-scale controls behave as intended",
+    "verifier exits nonzero on any failure"
+  ]
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">OW-L beats majority voting in 47 of 48 published ensemble cases</title>
+  <desc id="desc">A grid shows 47 wins and one non-win, split as 16 of 16 on UltraFeedback, 16 of 16 on MMLU, and 15 of 16 on ARMMAN.</desc>
+  <rect width="1200" height="600" fill="#0b1020"/>
+  <text x="70" y="65" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="32" font-weight="700">47 / 48 published cases favor OW-L over majority voting</text>
+  <text x="70" y="103" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="18">Exact arithmetic reconstruction of Appendix Tables 4–6 · 97.92%</text>
+  <g fill="#34d399">
+    <rect x="90" y="155" width="48" height="48" rx="7"/><rect x="150" y="155" width="48" height="48" rx="7"/><rect x="210" y="155" width="48" height="48" rx="7"/><rect x="270" y="155" width="48" height="48" rx="7"/><rect x="330" y="155" width="48" height="48" rx="7"/><rect x="390" y="155" width="48" height="48" rx="7"/><rect x="450" y="155" width="48" height="48" rx="7"/><rect x="510" y="155" width="48" height="48" rx="7"/>
+    <rect x="90" y="215" width="48" height="48" rx="7"/><rect x="150" y="215" width="48" height="48" rx="7"/><rect x="210" y="215" width="48" height="48" rx="7"/><rect x="270" y="215" width="48" height="48" rx="7"/><rect x="330" y="215" width="48" height="48" rx="7"/><rect x="390" y="215" width="48" height="48" rx="7"/><rect x="450" y="215" width="48" height="48" rx="7"/><rect x="510" y="215" width="48" height="48" rx="7"/>
+    <rect x="90" y="295" width="48" height="48" rx="7"/><rect x="150" y="295" width="48" height="48" rx="7"/><rect x="210" y="295" width="48" height="48" rx="7"/><rect x="270" y="295" width="48" height="48" rx="7"/><rect x="330" y="295" width="48" height="48" rx="7"/><rect x="390" y="295" width="48" height="48" rx="7"/><rect x="450" y="295" width="48" height="48" rx="7"/><rect x="510" y="295" width="48" height="48" rx="7"/>
+    <rect x="90" y="355" width="48" height="48" rx="7"/><rect x="150" y="355" width="48" height="48" rx="7"/><rect x="210" y="355" width="48" height="48" rx="7"/><rect x="270" y="355" width="48" height="48" rx="7"/><rect x="330" y="355" width="48" height="48" rx="7"/><rect x="390" y="355" width="48" height="48" rx="7"/><rect x="450" y="355" width="48" height="48" rx="7"/><rect x="510" y="355" width="48" height="48" rx="7"/>
+    <rect x="90" y="435" width="48" height="48" rx="7"/><rect x="150" y="435" width="48" height="48" rx="7"/><rect x="210" y="435" width="48" height="48" rx="7"/><rect x="270" y="435" width="48" height="48" rx="7"/><rect x="330" y="435" width="48" height="48" rx="7"/><rect x="390" y="435" width="48" height="48" rx="7"/><rect x="450" y="435" width="48" height="48" rx="7"/><rect x="510" y="435" width="48" height="48" rx="7"/>
+    <rect x="90" y="495" width="48" height="48" rx="7"/><rect x="150" y="495" width="48" height="48" rx="7"/><rect x="210" y="495" width="48" height="48" rx="7"/><rect x="270" y="495" width="48" height="48" rx="7"/><rect x="330" y="495" width="48" height="48" rx="7"/><rect x="390" y="495" width="48" height="48" rx="7"/><rect x="450" y="495" width="48" height="48" rx="7"/>
+  </g>
+  <rect x="510" y="495" width="48" height="48" rx="7" fill="#f59e0b"/>
+  <text x="610" y="185" fill="#6ee7b7" font-family="system-ui,sans-serif" font-size="22" font-weight="700">UltraFeedback</text>
+  <text x="825" y="185" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="22">16 / 16 wins</text>
+  <text x="610" y="245" fill="#6ee7b7" font-family="system-ui,sans-serif" font-size="22" font-weight="700">MMLU</text>
+  <text x="825" y="245" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="22">16 / 16 wins</text>
+  <text x="610" y="305" fill="#6ee7b7" font-family="system-ui,sans-serif" font-size="22" font-weight="700">ARMMAN</text>
+  <text x="825" y="305" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="22">15 / 16 wins</text>
+  <rect x="610" y="360" width="500" height="126" rx="16" fill="#13233b" stroke="#38bdf8"/>
+  <text x="640" y="402" fill="#7dd3fc" font-family="system-ui,sans-serif" font-size="20">Correct quantifier audit</text>
+  <text x="640" y="438" fill="#f8fafc" font-family="system-ui,sans-serif" font-size="20">Best-of-(OW-L, OW-I, ISP) lift: 0.54–14.20 pp</text>
+  <text x="640" y="468" fill="#fcd34d" font-family="system-ui,sans-serif" font-size="17">OW-L-only signed range is −0.51–14.20 pp</text>
+  <text x="610" y="535" fill="#94a3b8" font-family="system-ui,sans-serif" font-size="16">Green = OW-L &gt; MV · amber = OW-L ≤ MV</text>
+</svg>

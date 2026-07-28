@@ -1,0 +1,33 @@
+{
+  "claim_id": "claim_1",
+  "judge_claim": "The Optimal Weight algorithm assigns each LLM weight omega_i = sigma_K^{-1}(x_i), and Theorem 1 proves OW is Bayes-optimal among all aggregators with the same first-order accuracy information.",
+  "paper_anchors": [
+    "https://ar5iv.labs.arxiv.org/html/2510.01499#alg1",
+    "https://ar5iv.labs.arxiv.org/html/2510.01499#Thmtheorem1",
+    "https://ar5iv.labs.arxiv.org/html/2510.01499#Thmassumption1"
+  ],
+  "quantifiers": {
+    "N": "every integer N >= 1",
+    "K": "every integer K >= 2",
+    "P": "every post-shuffle joint distribution satisfying Proposition 1 and Assumption 1",
+    "accuracies": "every vector with 0 < x_i < 1",
+    "answers": "every observed answer profile in S^N"
+  },
+  "assumptions": [
+    "The ground-truth label is uniform after random label shuffling.",
+    "Each agent is correct with probability x_i and spreads error uniformly across the K-1 wrong labels.",
+    "Agents are conditionally independent given the ground-truth label.",
+    "All x_i are strictly between zero and one so finite log-odds are defined."
+  ],
+  "algorithm": {
+    "weight": "omega_i = log(x_i*(K-1)/(1-x_i)) = sigma_K^{-1}(x_i)",
+    "decision": "argmax_s sum_i omega_i * 1{a_i=s}"
+  },
+  "acceptance": [
+    "A machine-checked symbolic likelihood factorization proves equality of the complete OW and MAP argmax sets over the quantified domain.",
+    "An independently implemented exact-rational checker finds zero mismatches over every answer profile in a documented finite stress suite including below-chance and chance agents.",
+    "A negative control that preserves the marginals but violates conditional independence makes OW disagree with MAP for the intended reason.",
+    "The verifier exits nonzero if any proof step, exact checker, or control fails."
+  ],
+  "verdict_if_passed": "VERIFIED"
+}

@@ -1,0 +1,7 @@
+{
+  "purpose": "Published aggregates alone must never be accepted as raw reproduction evidence.",
+  "input": "Table 3's six point estimates and retained sample sizes, without per-example predictions.",
+  "faithful_rerun_ready": false,
+  "table_only_bundle_rejected": true,
+  "status": "PASS"
+}

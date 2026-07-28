@@ -1,0 +1,21 @@
+{
+  "P_answers_given_truth_0": "1/100",
+  "P_answers_given_truth_1": "1/10",
+  "conditional_independence": false,
+  "expected_disagreement_observed": true,
+  "map_label": 1,
+  "marginal_accuracies": [
+    "7/10",
+    "7/10",
+    "7/10"
+  ],
+  "ow_label": 0,
+  "purpose": "Assumption 1 violation must break OW/MAP equivalence",
+  "status": "PASS",
+  "uniform_prior_preserved": true,
+  "witness_answers": [
+    0,
+    0,
+    1
+  ]
+}

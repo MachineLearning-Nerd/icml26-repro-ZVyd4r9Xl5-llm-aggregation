@@ -1,0 +1,39 @@
+{
+  "candidate_git_sha": "105c515534a88a3849f75f28f61eb12252bd1e7a",
+  "checks": {
+    "all_claims_have_final_verdict": true,
+    "candidate_json_valid": true,
+    "claim_4_completed_three_routes_plus_falsification": true,
+    "current_judge_criticisms_answered": true,
+    "evaluator_blind_red_team_repeated_after_fixes": true,
+    "evaluator_visibility_matrix_complete": true,
+    "fixed_command_regression_on_release_child": true,
+    "historical_page_reachable_and_unchanged": true,
+    "judged_file_set_is_candidate_subset": true,
+    "marimo_check_strict": true,
+    "negative_controls_pass": true,
+    "no_toy_result_claimed_as_full_scale": true,
+    "raw_data_and_checkers_linked": true,
+    "secret_scan_clean": true,
+    "text_only_allowlist_and_manifest_prepared": true
+  },
+  "publication_allowed": true,
+  "release_regression": {
+    "allocated_vcpu": 8,
+    "backend": "hf",
+    "commit": "9aa15b7a8c85ba0d90eb42d8f9f7f19063cd577e",
+    "configured_claim_3_workers": 8,
+    "flavor": "cpu-upgrade",
+    "run_id": "299115bb-2200-40b8-8b8c-fadcbd392d8c",
+    "runtime_seconds": 90,
+    "verdicts": {
+      "claim_1": "VERIFIED",
+      "claim_2": "VERIFIED",
+      "claim_3": "VERIFIED",
+      "claim_4": "BLOCKED",
+      "claim_5": "VERIFIED",
+      "claim_6": "VERIFIED"
+    }
+  },
+  "reason": "All pre-publication release gates pass; Claim 4 remains explicitly BLOCKED rather than being promoted from aggregate-only evidence."
+}

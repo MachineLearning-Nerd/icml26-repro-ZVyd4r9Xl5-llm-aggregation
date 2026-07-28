@@ -1,0 +1,34 @@
+{
+  "claim_id": "claim_2",
+  "paper_statement": "ISP uses only second-order information and Theorem 2 proves E[Adv_ISP(s*)] >= E[Adv_MV(s*)] >= E[Adv_SP(s*)].",
+  "verdict_target": "VERIFIED",
+  "source": {
+    "url": "https://ar5iv.labs.arxiv.org/html/2510.01499",
+    "retrieved_at_utc": "2026-07-28T17:44:20Z",
+    "sha256": "f9f8bd43851f5d7c44cc21550d2ee2a85bf2bdf20f94b0fdb2a50a76d1406fd0",
+    "algorithm_anchor": "#alg2",
+    "theorem_anchor": "#Thmtheorem2",
+    "assumption_anchor": "#Thmassumption1",
+    "section_premise_anchor": "#S4.p3"
+  },
+  "domain": {
+    "N": "every integer N >= 2",
+    "K": "every integer K >= 2",
+    "accuracies": "every x_i in [1/K, 1]",
+    "pairwise_information": "exact P(A_i=s | A_j=a)"
+  },
+  "assumptions": [
+    "uniform post-shuffle truth prior",
+    "uniform error probability over the K-1 wrong labels",
+    "agents conditionally independent given truth",
+    "all agents no worse than random guessing"
+  ],
+  "acceptance": [
+    "generic exact-algebra certificate proves both displayed gap formulas",
+    "nonnegativity under every stated premise proves the ordering",
+    "Algorithm 2 implementation receives no ground-truth labels",
+    "independent exact checker matches both formulas on complete finite answer domains",
+    "negative control reverses the ordering when the chance premise is intentionally violated",
+    "verifier exits nonzero if any check fails"
+  ]
+}

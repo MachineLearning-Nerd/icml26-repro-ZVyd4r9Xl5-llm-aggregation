@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "decimal_bt_error": "0.000",
+      "odds": "1/999",
+      "probability": "1/1000",
+      "rational_composition_exact": true
+    },
+    {
+      "decimal_bt_error": "0.0",
+      "odds": "1/9",
+      "probability": "1/10",
+      "rational_composition_exact": true
+    },
+    {
+      "decimal_bt_error": "0.0",
+      "odds": "1/1",
+      "probability": "1/2",
+      "rational_composition_exact": true
+    },
+    {
+      "decimal_bt_error": "1E-60",
+      "odds": "3/1",
+      "probability": "3/4",
+      "rational_composition_exact": true
+    },
+    {
+      "decimal_bt_error": "1E-60",
+      "odds": "9/1",
+      "probability": "9/10",
+      "rational_composition_exact": true
+    },
+    {
+      "decimal_bt_error": "4E-60",
+      "odds": "999/1",
+      "probability": "999/1000",
+      "rational_composition_exact": true
+    }
+  ],
+  "checker": "Fraction algebra plus independent Decimal ln/exp route",
+  "imports_production_code": false,
+  "status": "PASS"
+}

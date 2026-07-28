@@ -1,0 +1,20 @@
+{
+  "algorithm_1_weight_equality": "omega_i=sigma_2^{-1}(x_i)",
+  "bradley_terry_factorization": "exp(r1)/(exp(r1)+exp(r0))=exp(r1-r0)/(1+exp(r1-r0))=sigma(r1-r0)",
+  "bt_score_difference": "r1-r0=log(p/(1-p))",
+  "composition_identity": "(x/(1-x))/(1+x/(1-x))=x",
+  "corollary_proportionality": "multiplying every weight by one common positive constant preserves the weighted-vote argmax",
+  "cross_multiplication": [
+    "x*(1+z)=z where z=exp(w)>0",
+    "z*(1-x)=x",
+    "z=x/(1-x)",
+    "w=log(x/(1-x)) because exp is bijective R -> (0,infinity)"
+  ],
+  "denominator_positive": true,
+  "domain": "x in (0,1); endpoints are extended-real limits",
+  "inverse_candidate": "w=log(x/(1-x))",
+  "sigma_2": "exp(w)/(1+exp(w))",
+  "solution_positive": true,
+  "solution_unique": true,
+  "status": "PASS"
+}

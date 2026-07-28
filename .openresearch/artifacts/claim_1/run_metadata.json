@@ -1,0 +1,18 @@
+{
+  "run_id": "e9b490a9-5453-44a9-894c-caca9e211f2a",
+  "experiment_id": "524bffaa-9de0-4e66-9fea-aada058866ef",
+  "git_sha": "058717d1224728e1aa64f2067eb3e6ecb266206b",
+  "fixed_command": "uv run python repro/src/verify.py",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
+  "estimated_required_cores": 1,
+  "estimate_reason": "Exact-rational enumeration covers 418 small answer profiles and the symbolic check is linear in certificate size.",
+  "selection_reason": "Fresh dependency installation made wall time uncertain, requiring cpu-upgrade under the campaign policy.",
+  "allocated_vcpu": 8,
+  "allocated_memory_gb": 32,
+  "host_visible_cpu_count_reported_by_container": 64,
+  "total_runtime_seconds": 53,
+  "claim_verifier_runtime_seconds": 0.128229,
+  "approximate_cost_usd_upper_bound": 0.0005
+}

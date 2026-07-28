@@ -1,0 +1,687 @@
+{
+  "claim_id": "claim_3",
+  "configured_workers": 8,
+  "cpu_count_visible": 64,
+  "full": {
+    "M": 10000,
+    "N": 4,
+    "acceptance": {
+      "K2_K4_paper_values_within_predictive_interval95": true,
+      "paired_gap_mean_ci95_above_zero_all_paper_K": true
+    },
+    "accuracies": [
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "accuracy_gap_scaling": {
+      "K_values": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "interpretation": "finite-grid empirical evidence only; the paper's exact Theta statement is for expected advantage",
+      "mean_gap_loglog_slope": -0.9015884260458898,
+      "mean_gaps": [
+        0.05159887640449438,
+        0.020367415730337072,
+        0.0155370786516854,
+        0.013406741573033714,
+        0.011925842696629212
+      ],
+      "scope": "empirical aggregation-accuracy gap on the paper K grid",
+      "seed_slope_interval95": [
+        -1.021241962039815,
+        -0.751729064323301
+      ],
+      "seed_slope_median": -0.9155151981425933,
+      "valid_seed_slopes": 89
+    },
+    "assessment": "paper K=2/K=4 values statistically compatible and paired ISP improvement positive across all paper K",
+    "calibrated_from_pilot_replicates": 89,
+    "configured_workers": 8,
+    "expected_advantage_scaling": {
+      "K_times_gap": [
+        1.5913876543209877,
+        1.6468239848723885,
+        1.6736874800870767,
+        1.6869117412775507,
+        1.6934727628639563,
+        1.6967405910269062
+      ],
+      "K_values": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ],
+      "certificate": "numerator has degree 3 with positive leading coefficient and denominator has degree 4 with positive leading coefficient",
+      "exact_formula_values": [
+        0.09946172839506173,
+        0.05146324952726214,
+        0.026151366876360573,
+        0.013178997978730865,
+        0.006615127979937329,
+        0.003313946466849426
+      ],
+      "loglog_slope": -0.9830099118251953,
+      "scope": "Theorem 2 expected-advantage gap"
+    },
+    "extended_K": [
+      12,
+      16,
+      24,
+      32
+    ],
+    "paper_K": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "replicates": 89,
+    "seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029,
+      1030,
+      1031,
+      1032,
+      1033,
+      1034,
+      1035,
+      1036,
+      1037,
+      1038,
+      1039,
+      1040,
+      1041,
+      1042,
+      1043,
+      1044,
+      1045,
+      1046,
+      1047,
+      1048,
+      1049,
+      1050,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056,
+      1057,
+      1058,
+      1059,
+      1060,
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1076,
+      1077,
+      1078,
+      1079,
+      1080,
+      1081,
+      1082,
+      1083,
+      1084,
+      1085,
+      1086,
+      1087,
+      1088
+    ],
+    "stage": "full",
+    "summary": {
+      "10": {
+        "gap": {
+          "mean": 0.011925842696629212,
+          "mean_ci95_normal": [
+            0.01155281405771562,
+            0.012298871335542803
+          ],
+          "sample_std": 0.0017954822149120252,
+          "single_run_max": 0.01650000000000007,
+          "single_run_min": 0.008099999999999996,
+          "single_run_predictive_interval95": [
+            0.00862000000000005,
+            0.015440000000000053
+          ]
+        },
+        "isp": {
+          "mean": 0.9639224719101123,
+          "mean_ci95_normal": [
+            0.9634967403940404,
+            0.9643482034261841
+          ],
+          "sample_std": 0.0020491546377264113,
+          "single_run_max": 0.9685,
+          "single_run_min": 0.9588,
+          "single_run_predictive_interval95": [
+            0.95962,
+            0.96812
+          ]
+        },
+        "mv": {
+          "mean": 0.9519966292134832,
+          "mean_ci95_normal": [
+            0.9515610941787259,
+            0.9524321642482404
+          ],
+          "sample_std": 0.0020963414797192294,
+          "single_run_max": 0.9577,
+          "single_run_min": 0.948,
+          "single_run_predictive_interval95": [
+            0.94838,
+            0.95678
+          ]
+        },
+        "paper": {
+          "isp": 0.9649,
+          "mv": 0.9554
+        },
+        "paper_compatibility": {
+          "isp": {
+            "single_run_z_score": 0.4770396884113664,
+            "within_empirical_predictive_interval95": true
+          },
+          "mv": {
+            "single_run_z_score": 1.6234811071775834,
+            "within_empirical_predictive_interval95": true
+          }
+        },
+        "replicates": 89
+      },
+      "12": {
+        "gap": {
+          "mean": 0.01083370786516854,
+          "mean_ci95_normal": [
+            0.01045142633142501,
+            0.011215989398912071
+          ],
+          "sample_std": 0.001840018763505162,
+          "single_run_max": 0.015100000000000002,
+          "single_run_min": 0.00649999999999995,
+          "single_run_predictive_interval95": [
+            0.007439999999999958,
+            0.014139999999999996
+          ]
+        },
+        "isp": {
+          "mean": 0.9657516853932584,
+          "mean_ci95_normal": [
+            0.9652994354565967,
+            0.9662039353299201
+          ],
+          "sample_std": 0.0021767945762452196,
+          "single_run_max": 0.9725,
+          "single_run_min": 0.9591,
+          "single_run_predictive_interval95": [
+            0.9623,
+            0.96958
+          ]
+        },
+        "mv": {
+          "mean": 0.9549179775280899,
+          "mean_ci95_normal": [
+            0.9545089356776026,
+            0.9553270193785772
+          ],
+          "sample_std": 0.0019688230100605316,
+          "single_run_max": 0.9611,
+          "single_run_min": 0.9511,
+          "single_run_predictive_interval95": [
+            0.9517,
+            0.9589599999999999
+          ]
+        },
+        "replicates": 89
+      },
+      "16": {
+        "gap": {
+          "mean": 0.009513483146067411,
+          "mean_ci95_normal": [
+            0.009195622848104046,
+            0.009831343444030777
+          ],
+          "sample_std": 0.0015299428844980979,
+          "single_run_max": 0.013299999999999979,
+          "single_run_min": 0.0043999999999999595,
+          "single_run_predictive_interval95": [
+            0.006940000000000013,
+            0.012680000000000023
+          ]
+        },
+        "isp": {
+          "mean": 0.9678078651685393,
+          "mean_ci95_normal": [
+            0.9673758720796974,
+            0.9682398582573812
+          ],
+          "sample_std": 0.002079293188425355,
+          "single_run_max": 0.9721,
+          "single_run_min": 0.9616,
+          "single_run_predictive_interval95": [
+            0.96384,
+            0.97198
+          ]
+        },
+        "mv": {
+          "mean": 0.9582943820224717,
+          "mean_ci95_normal": [
+            0.9578866637983519,
+            0.9587021002465916
+          ],
+          "sample_std": 0.0019624520579298627,
+          "single_run_max": 0.9627,
+          "single_run_min": 0.9529,
+          "single_run_predictive_interval95": [
+            0.95462,
+            0.9621000000000001
+          ]
+        },
+        "replicates": 89
+      },
+      "2": {
+        "gap": {
+          "mean": 0.05159887640449438,
+          "mean_ci95_normal": [
+            0.050950960663836864,
+            0.05224679214515189
+          ],
+          "sample_std": 0.0031185841186354276,
+          "single_run_max": 0.0595,
+          "single_run_min": 0.04459999999999997,
+          "single_run_predictive_interval95": [
+            0.045260000000000036,
+            0.057760000000000054
+          ]
+        },
+        "isp": {
+          "mean": 0.9016179775280899,
+          "mean_ci95_normal": [
+            0.9009724275725064,
+            0.9022635274836734
+          ],
+          "sample_std": 0.0031071969901911513,
+          "single_run_max": 0.9082,
+          "single_run_min": 0.8955,
+          "single_run_predictive_interval95": [
+            0.8962,
+            0.90784
+          ]
+        },
+        "mv": {
+          "mean": 0.8500191011235954,
+          "mean_ci95_normal": [
+            0.849252039470159,
+            0.8507861627770317
+          ],
+          "sample_std": 0.003692063860021377,
+          "single_run_max": 0.8591,
+          "single_run_min": 0.8396,
+          "single_run_predictive_interval95": [
+            0.84336,
+            0.85732
+          ]
+        },
+        "paper": {
+          "isp": 0.9048,
+          "mv": 0.8513
+        },
+        "paper_compatibility": {
+          "isp": {
+            "single_run_z_score": 1.0240813446830657,
+            "within_empirical_predictive_interval95": true
+          },
+          "mv": {
+            "single_run_z_score": 0.3469330230916358,
+            "within_empirical_predictive_interval95": true
+          }
+        },
+        "replicates": 89
+      },
+      "24": {
+        "gap": {
+          "mean": 0.007819101123595506,
+          "mean_ci95_normal": [
+            0.0074629795157423115,
+            0.0081752227314487
+          ],
+          "sample_std": 0.0017141043516350454,
+          "single_run_max": 0.011199999999999988,
+          "single_run_min": 0.0041999999999999815,
+          "single_run_predictive_interval95": [
+            0.00459999999999996,
+            0.010379999999999988
+          ]
+        },
+        "isp": {
+          "mean": 0.9691516853932584,
+          "mean_ci95_normal": [
+            0.9687619805429176,
+            0.9695413902435991
+          ],
+          "sample_std": 0.001875749084278227,
+          "single_run_max": 0.9727,
+          "single_run_min": 0.9648,
+          "single_run_predictive_interval95": [
+            0.96522,
+            0.9719
+          ]
+        },
+        "mv": {
+          "mean": 0.961332584269663,
+          "mean_ci95_normal": [
+            0.9609205767305874,
+            0.9617445918087385
+          ],
+          "sample_std": 0.0019830976275020556,
+          "single_run_max": 0.9657,
+          "single_run_min": 0.9561,
+          "single_run_predictive_interval95": [
+            0.95714,
+            0.96546
+          ]
+        },
+        "replicates": 89
+      },
+      "32": {
+        "gap": {
+          "mean": 0.006961797752808986,
+          "mean_ci95_normal": [
+            0.006670757225889528,
+            0.007252838279728444
+          ],
+          "sample_std": 0.0014008524691948886,
+          "single_run_max": 0.010499999999999954,
+          "single_run_min": 0.0034000000000000696,
+          "single_run_predictive_interval95": [
+            0.004539999999999944,
+            0.009660000000000023
+          ]
+        },
+        "isp": {
+          "mean": 0.9695471910112359,
+          "mean_ci95_normal": [
+            0.9691723055778944,
+            0.9699220764445774
+          ],
+          "sample_std": 0.0018044194412381736,
+          "single_run_max": 0.9737,
+          "single_run_min": 0.9645,
+          "single_run_predictive_interval95": [
+            0.96598,
+            0.97312
+          ]
+        },
+        "mv": {
+          "mean": 0.9625853932584271,
+          "mean_ci95_normal": [
+            0.9622018230246969,
+            0.9629689634921572
+          ],
+          "sample_std": 0.0018462216060349762,
+          "single_run_max": 0.9679,
+          "single_run_min": 0.9584,
+          "single_run_predictive_interval95": [
+            0.9592,
+            0.9667399999999999
+          ]
+        },
+        "replicates": 89
+      },
+      "4": {
+        "gap": {
+          "mean": 0.020367415730337072,
+          "mean_ci95_normal": [
+            0.019922572700100217,
+            0.020812258760573927
+          ],
+          "sample_std": 0.002141143241827233,
+          "single_run_max": 0.024599999999999955,
+          "single_run_min": 0.01639999999999997,
+          "single_run_predictive_interval95": [
+            0.01639999999999997,
+            0.024140000000000005
+          ]
+        },
+        "isp": {
+          "mean": 0.9441426966292135,
+          "mean_ci95_normal": [
+            0.9436594917545825,
+            0.9446259015038444
+          ],
+          "sample_std": 0.002325788607237707,
+          "single_run_max": 0.9516,
+          "single_run_min": 0.9394,
+          "single_run_predictive_interval95": [
+            0.9396599999999999,
+            0.94828
+          ]
+        },
+        "mv": {
+          "mean": 0.9237752808988763,
+          "mean_ci95_normal": [
+            0.9231882386478873,
+            0.9243623231498652
+          ],
+          "sample_std": 0.0028255844487499134,
+          "single_run_max": 0.9309,
+          "single_run_min": 0.9164,
+          "single_run_predictive_interval95": [
+            0.9186,
+            0.92914
+          ]
+        },
+        "paper": {
+          "isp": 0.9445,
+          "mv": 0.9264
+        },
+        "paper_compatibility": {
+          "isp": {
+            "single_run_z_score": 0.1536267611229319,
+            "within_empirical_predictive_interval95": true
+          },
+          "mv": {
+            "single_run_z_score": 0.9289119291001684,
+            "within_empirical_predictive_interval95": true
+          }
+        },
+        "replicates": 89
+      },
+      "6": {
+        "gap": {
+          "mean": 0.0155370786516854,
+          "mean_ci95_normal": [
+            0.015141697493292028,
+            0.01593245981007877
+          ],
+          "sample_std": 0.0019030706062519091,
+          "single_run_max": 0.020100000000000007,
+          "single_run_min": 0.011099999999999999,
+          "single_run_predictive_interval95": [
+            0.012319999999999975,
+            0.01934000000000007
+          ]
+        },
+        "isp": {
+          "mean": 0.9561033707865169,
+          "mean_ci95_normal": [
+            0.9556160261894538,
+            0.9565907153835799
+          ],
+          "sample_std": 0.0023457141497460234,
+          "single_run_max": 0.9604,
+          "single_run_min": 0.9489,
+          "single_run_predictive_interval95": [
+            0.95162,
+            0.9600799999999999
+          ]
+        },
+        "mv": {
+          "mean": 0.9405662921348313,
+          "mean_ci95_normal": [
+            0.9400881173059711,
+            0.9410444669636916
+          ],
+          "sample_std": 0.002301577710863136,
+          "single_run_max": 0.9456,
+          "single_run_min": 0.9347,
+          "single_run_predictive_interval95": [
+            0.93658,
+            0.94468
+          ]
+        },
+        "paper": {
+          "isp": 0.9578,
+          "mv": 0.9422
+        },
+        "paper_compatibility": {
+          "isp": {
+            "single_run_z_score": 0.7232889879897871,
+            "within_empirical_predictive_interval95": true
+          },
+          "mv": {
+            "single_run_z_score": 0.7098208578653756,
+            "within_empirical_predictive_interval95": true
+          }
+        },
+        "replicates": 89
+      },
+      "8": {
+        "gap": {
+          "mean": 0.013406741573033714,
+          "mean_ci95_normal": [
+            0.01303163759750209,
+            0.013781845548565338
+          ],
+          "sample_std": 0.0018054713406758975,
+          "single_run_max": 0.017000000000000015,
+          "single_run_min": 0.009800000000000031,
+          "single_run_predictive_interval95": [
+            0.010319999999999996,
+            0.016780000000000017
+          ]
+        },
+        "isp": {
+          "mean": 0.9609359550561797,
+          "mean_ci95_normal": [
+            0.9605504752906077,
+            0.9613214348217517
+          ],
+          "sample_std": 0.0018554126710183072,
+          "single_run_max": 0.9651,
+          "single_run_min": 0.9559,
+          "single_run_predictive_interval95": [
+            0.95702,
+            0.9644
+          ]
+        },
+        "mv": {
+          "mean": 0.9475292134831459,
+          "mean_ci95_normal": [
+            0.9470832974808711,
+            0.9479751294854207
+          ],
+          "sample_std": 0.002146307730583284,
+          "single_run_max": 0.9531,
+          "single_run_min": 0.9434,
+          "single_run_predictive_interval95": [
+            0.94364,
+            0.9518599999999999
+          ]
+        },
+        "paper": {
+          "isp": 0.9623,
+          "mv": 0.9485
+        },
+        "paper_compatibility": {
+          "isp": {
+            "single_run_z_score": 0.735170652398172,
+            "within_empirical_predictive_interval95": true
+          },
+          "mv": {
+            "single_run_z_score": 0.45230537216128547,
+            "within_empirical_predictive_interval95": true
+          }
+        },
+        "replicates": 89
+      }
+    },
+    "verdict": "VERIFIED"
+  },
+  "full_status": "PASS",
+  "git_sha": "487619616606323f25dbac108c646cfd023ec2cf",
+  "independent_checker": {
+    "K": 4,
+    "M": 256,
+    "digest": "1b6a3cf798b3062851bd1a4be51fa37bc8eeb7d2265f44e841807302c4d890fd",
+    "imports_production_aggregation": false,
+    "isp_accuracy": 0.9453125,
+    "mv_accuracy": 0.94921875,
+    "seed": 19,
+    "status": "PASS"
+  },
+  "negative_controls": {
+    "sign_mutation_bad_digest": "11447b8dadc529f3217d8f2b96182aec6c119b8ea067f31e5dc317897f4cf125",
+    "sign_mutation_changes_predictions": true,
+    "sign_mutation_prediction_mismatches": 38,
+    "sign_mutation_reference_digest": "2fd3c14aa3589df7ec9df5184aee89ceac49722459629f4ff330109ddd878696",
+    "uniform_pairwise_makes_isp_identical_to_mv": true,
+    "uniform_pairwise_prediction_mismatches": 0
+  },
+  "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+  "production_independent_digest_match": true,
+  "production_small_case_digest": "1b6a3cf798b3062851bd1a4be51fa37bc8eeb7d2265f44e841807302c4d890fd",
+  "python": "3.12.12",
+  "runtime_seconds": 30.77771,
+  "stage": "full",
+  "verdict": "VERIFIED"
+}
